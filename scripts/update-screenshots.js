@@ -59,10 +59,11 @@ async function takeScreenshot(browser, url, width, height, filename) {
     } else {
       const existingImage = await jimp.read(target)
       const latestImage = await jimp.read(tmpName)
-      const distance = jimp.distance(existingImage, latestImage)
-      if (distance > 0) {
+      const diff = jimp.diff(existingImage, latestImage)
+      const threshold = 0.001
+      if (diff.percent < threshold) {
         fs.copyFileSync(tmpName, target)
-        log.info({ distance }, 'Update: "%s"', target)
+        log.info({ diffPercent: diff.percent }, 'Update: "%s"', target)
         return false
       } else {
         log.info('Already up-to-date: "%s"', target)
