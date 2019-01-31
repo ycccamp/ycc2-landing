@@ -1,0 +1,26 @@
+version: 2
+references:
+  restore_node_modules_cache: &restore_node_modules_cache
+    restore_cache:
+      keys:
+        - deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - deps-{{ .Branch }}-
+        - deps-
+  save_node_modules_cache: &save_node_modules_cache
+    save_cache:
+      key: deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      paths:
+        - ./node_modules
+jobs:
+  build:
+    working_directory: ~/ycc.in.th
+    environment:
+      FORCE_COLOR: '1'
+    docker:
+      - image: circleci/node:10.15.1-browsers
+    steps:
+      - checkout
+      - *restore_node_modules_cache
+      - run: yarn
+      - *save_node_modules_cache
+      - run: node scripts screenshots
