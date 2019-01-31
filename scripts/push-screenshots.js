@@ -22,12 +22,17 @@ exports.run = async () => {
   log.info('Got things to push!')
   for (let i = 0; i < 3; i++) {
     try {
-      execSync('git push', { stdio: 'inherit' })
+      execSync('git push -u "$(git rev-parse --abbrev-ref HEAD)"', {
+        stdio: 'inherit',
+      })
       log.info('Pushed successfully!')
       return
     } catch (e) {
       log.info('Got things to pull!')
-      execSync('git pull --no-edit', { stdio: 'inherit' })
+      execSync(
+        'git pull origin "$(git rev-parse --abbrev-ref HEAD)" --no-edit',
+        { stdio: 'inherit' }
+      )
     }
   }
   throw new Error('Cannot push!')
