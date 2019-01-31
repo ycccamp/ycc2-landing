@@ -11,7 +11,9 @@ exports.run = async () => {
   const server = await startStaticFilesServer()
   const address = /** @type {import('net').AddressInfo} */ (server.address())
   log.info('Server started on port %s...', address.port)
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+    args: ['--single-process'],
+  })
   log.info('Browser launched.')
   const url = `http://localhost:${address.port}`
   await takeScreenshot(browser, url, 375, 667, 'Homepage-375w.png')
