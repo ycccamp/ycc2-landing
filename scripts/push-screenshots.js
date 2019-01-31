@@ -5,7 +5,7 @@ const log = require('./log')
 exports.run = async () => {
   spawnSync('git add screenshots', { shell: true, stdio: 'inherit' })
   if (
-    spawnSync('git commit -a -m "Update screenshots"', {
+    spawnSync('git commit -a -m ":camera_flash: Update screenshots"', {
       env: {
         ...process.env,
         GIT_COMMITTER_NAME: 'Janitor',
