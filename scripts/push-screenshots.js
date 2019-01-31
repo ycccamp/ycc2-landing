@@ -3,7 +3,7 @@ const { spawnSync, execSync } = require('child_process')
 const log = require('./log')
 
 exports.run = async () => {
-  spawnSync('git add screenshots', { shell: true, stdio: 'inherit' })
+  spawnSync('git add __screenshots__', { shell: true, stdio: 'inherit' })
   if (
     spawnSync('git commit -a -m ":camera_flash: Update screenshots"', {
       env: {
