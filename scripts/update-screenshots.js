@@ -12,6 +12,7 @@ exports.run = async () => {
   const address = /** @type {import('net').AddressInfo} */ (server.address())
   log.info('Server started on port %s...', address.port)
   const browser = await puppeteer.launch()
+  log.info('Browser launched.')
   const url = `http://localhost:${address.port}`
   await takeScreenshot(browser, url, 375, 667, 'Homepage-375w.png')
   await browser.close()
@@ -40,6 +41,7 @@ async function startStaticFilesServer() {
  */
 async function takeScreenshot(browser, url, width, height, filename) {
   const page = await browser.newPage()
+  log.info('New page created.')
   try {
     const tmpName = tmp.tmpNameSync({ postfix: '.png' })
     const target = 'screenshots/' + filename
