@@ -61,7 +61,7 @@ async function takeScreenshot(browser, url, width, height, filename) {
       const latestImage = await jimp.read(tmpName)
       const diff = jimp.diff(existingImage, latestImage)
       const threshold = 0.001
-      if (diff.percent < threshold) {
+      if (diff.percent > threshold) {
         fs.copyFileSync(tmpName, target)
         log.info({ diffPercent: diff.percent }, 'Update: "%s"', target)
         return false
