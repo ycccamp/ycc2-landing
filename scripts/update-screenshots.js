@@ -17,6 +17,7 @@ exports.run = async () => {
   log.info('Browser launched.')
   const url = `http://localhost:${address.port}`
   await takeScreenshot(browser, url, 375, 667, 'Homepage-375w.png')
+  await takeScreenshot(browser, url, 1280, 720, 'Homepage-1280w.png')
   await browser.close()
   server.close()
 }
