@@ -22,7 +22,7 @@ exports.run = async () => {
   log.info('Got things to push!')
   for (let i = 0; i < 3; i++) {
     try {
-      execSync('git push -u "$(git rev-parse --abbrev-ref HEAD)"', {
+      execSync('git push origin "$(git rev-parse --abbrev-ref HEAD)"', {
         stdio: 'inherit',
       })
       log.info('Pushed successfully!')
