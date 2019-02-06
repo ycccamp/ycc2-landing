@@ -5,6 +5,7 @@ const rimraf = require('rimraf')
 
 const distDir = path.resolve(__dirname, '../dist')
 const srcDir = path.resolve(__dirname, '../src')
+const staticDir = path.resolve(__dirname, '../static')
 
 const options = {
   outDir: distDir,
@@ -20,7 +21,7 @@ exports.bundle = async () => {
   await bundler.bundle()
   await new Promise((resolve, reject) => {
     vfs
-      .src(srcDir + '/**/*')
+      .src(staticDir + '/**/*')
       .pipe(vfs.dest(distDir))
       .on('end', resolve)
       .on('error', reject)
