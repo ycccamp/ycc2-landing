@@ -20,20 +20,15 @@ exports.run = async () => {
     return
   }
   log.info('Got things to push!')
-  for (let i = 0; i < 3; i++) {
-    try {
-      execSync('git push origin "$(git rev-parse --abbrev-ref HEAD)"', {
-        stdio: 'inherit',
-      })
-      log.info('Pushed successfully!')
-      return
-    } catch (e) {
-      log.info('Got things to pull!')
-      execSync(
-        'git pull origin "$(git rev-parse --abbrev-ref HEAD)" --no-edit',
-        { stdio: 'inherit' }
-      )
-    }
+  try {
+    execSync('git push origin "$(git rev-parse --abbrev-ref HEAD)"', {
+      stdio: 'inherit',
+    })
+    log.info('Pushed successfully!')
+    return
+  } catch (e) {
+    log.info('Cannot push... but it’s fine!')
+    // Someone else may have pushed to the branch in the meantime,
+    // and another build should have triggered.
   }
-  throw new Error('Cannot push!')
 }
