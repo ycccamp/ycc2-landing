@@ -24,7 +24,7 @@ exports.run = async () => {
 
 async function startStaticFilesServer() {
   const app = express()
-  app.use(express.static('public'))
+  app.use(express.static('dist'))
   /** @type {import('http').Server} */
   const server = await new Promise(resolve => {
     app.listen(function() {
