@@ -23,5 +23,6 @@ jobs:
       - *restore_node_modules_cache
       - run: yarn
       - *save_node_modules_cache
+      - run: node scripts build
       - run: node scripts update-screenshots
       - run: node scripts push-screenshots
