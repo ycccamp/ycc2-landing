@@ -41,6 +41,23 @@ h1 {
   font-family: 'FC Lamoon';
   font-size: 3.2rem;
   font-weight: lighter;
+  position: relative;
+  z-index: 999;
+  display: inline-block;
+}
+.heading span {
+  position: relative;
+  z-index: 999;
+}
+.heading > .ellipse {
+  width: 90px;
+  height: 90px;
+  top: -20px;
+  left: -40px;
+  z-index: 9;
+  position: absolute;
+  background: url(/img/ellipse.png) no-repeat center center;
+  background-size: contain;
 }
 .content {
   font-family: 'CS ChatThai';
@@ -131,5 +148,7 @@ h1 {
 }
 .major .container {
   width: 1100px;
+  position: relative;
+  z-index: 999;
   margin: auto auto;
 }
