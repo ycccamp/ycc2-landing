@@ -11,7 +11,6 @@ body {
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'FC Lamoon';
   src: url('/fonts/subset-FCLamoonRegular.woff2') format('woff2');
@@ -19,12 +18,18 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'FC Lamoon';
   src: url('/fonts/subset-FCLamoonLight.woff2') format('woff2');
   src: url('/fonts/subset-FCLamoonLight.woff') format('woff');
   font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CS ChatThai';
+  src: url('/fonts/CSChatThai.woff2') format('woff2');
+  src: url('/fonts/CSChatThai.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -36,7 +41,10 @@ h1 {
   font-family: 'FC Lamoon';
   font-size: 3.2rem;
   font-weight: lighter;
-  line-height: 20px;
+}
+.content {
+  font-family: 'CS ChatThai';
+  font-size: 1.4rem;
 }
 
 // Top landing page section
@@ -44,6 +52,9 @@ h1 {
   position: relative;
   height: 100vh;
   background: linear-gradient(to top, #99ccff, #ffffff);
+}
+.landing h1 {
+  line-height: 20px;
 }
 .landing p {
   font-family: 'FC Lamoon';
@@ -99,6 +110,10 @@ h1 {
   width: 700px;
   margin: auto auto;
   text-align: center;
+}
+.about .concept {
+  font-family: 'CS ChatThai';
+  font-size: 1.8rem;
 }
 
 // Major Section
