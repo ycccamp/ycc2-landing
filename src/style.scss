@@ -38,22 +38,54 @@ h1 {
   height: 100vh;
   background: linear-gradient(to top, #99ccff, #ffffff);
 }
+.landing h1 {
+  font-family: 'FC Lamoon';
+  font-size: 3.5rem;
+  font-weight: lighter;
+  line-height: 20px;
+}
+.landing p {
+  font-family: 'FC Lamoon';
+  font-size: 1.8rem;
+}
 .landing .center {
   position: absolute;
   left: 50%;
+  top: 50%;
+  z-index: 999;
   text-align: center;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 .landing .logo {
-  width: 300px;
+  width: 280px;
+  margin-bottom: 30px;
 }
 .landing .register {
+  font-family: 'FC Lamoon';
+  font-size: 1.8rem;
   text-decoration: none;
   color: black;
   padding: 7px 40px;
   border-radius: 13.5px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
   background-color: #ffffff;
+  display: inline-block;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.landing .countdown {
+  margin-top: 50px;
+}
+.landing .countdown > .timer {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: -20px;
+  font-family: 'FC Lamoon';
+}
+.landing .bubble {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 // About Section
