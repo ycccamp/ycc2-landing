@@ -105,6 +105,7 @@ h1 {
   background: white;
   width: 100vw;
   padding: 50px 0;
+  position: relative;
 }
 .about .container {
   width: 700px;
@@ -114,6 +115,12 @@ h1 {
 .about .concept {
   font-family: 'CS ChatThai';
   font-size: 1.8rem;
+}
+.about .bubble {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
 }
 
 // Major Section
