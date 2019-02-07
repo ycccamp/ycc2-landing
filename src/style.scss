@@ -32,21 +32,22 @@ h1 {
   margin: 0;
 }
 
+.heading {
+  font-family: 'FC Lamoon';
+  font-size: 3.2rem;
+  font-weight: lighter;
+  line-height: 20px;
+}
+
 // Top landing page section
 .landing {
   position: relative;
   height: 100vh;
   background: linear-gradient(to top, #99ccff, #ffffff);
 }
-.landing h1 {
-  font-family: 'FC Lamoon';
-  font-size: 3.5rem;
-  font-weight: lighter;
-  line-height: 20px;
-}
 .landing p {
   font-family: 'FC Lamoon';
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .landing .center {
   position: absolute;
@@ -62,7 +63,7 @@ h1 {
 }
 .landing .register {
   font-family: 'FC Lamoon';
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-decoration: none;
   color: black;
   padding: 7px 40px;
