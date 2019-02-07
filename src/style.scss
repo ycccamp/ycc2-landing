@@ -13,7 +13,7 @@ h1 {
 .landing {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to top, #99ccff, #ffffff);
+  background: linear-gradient(to top, #99ccff, #ffffff);
 }
 .landing .center {
   position: absolute;
@@ -43,4 +43,15 @@ h1 {
   width: 700px;
   margin: auto auto;
   text-align: center;
+}
+
+// Major Section
+.major {
+  width: 100vw;
+  padding: 70px 0;
+  background: linear-gradient(to bottom, #99ccff, #d9ecff);
+}
+.major .container {
+  width: 1100px;
+  margin: auto auto;
 }
