@@ -5,6 +5,29 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+@font-face {
+  font-family: 'FC Lamoon';
+  src: url('/fonts/subset-FCLamoonBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FC Lamoon';
+  src: url('/fonts/subset-FCLamoonRegular.woff2') format('woff2');
+  src: url('/fonts/subset-FCLamoonRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FC Lamoon';
+  src: url('/fonts/subset-FCLamoonLight.woff2') format('woff2');
+  src: url('/fonts/subset-FCLamoonLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
 h1 {
   margin: 0;
 }
