@@ -161,10 +161,18 @@ h1 {
 }
 
 .major .column {
-  width: 46%;
+  flex-basis: 50%;
+  max-width: 680px;
   padding: 10px;
   margin: 0 10px;
   position: relative;
+}
+.major .column.is-left {
+  text-align: left;
+}
+.major .column.is-right {
+  text-align: right;
+  margin-top: 0;
 }
 
 .major .column .image {
@@ -172,6 +180,12 @@ h1 {
   z-index: 2;
   width: 200px;
   top: -30px;
+}
+.major .column.is-left .image {
+  left: 0;
+}
+.major .column.is-right .image {
+  right: 0;
 }
 
 .major .column .card {
@@ -181,16 +195,21 @@ h1 {
 }
 
 .major .column .card .content {
-  padding-left: 200px;
-  width: 60%;
   margin: auto auto;
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.major .column.is-left .card .content {
+  padding-left: 200px;
+  padding-right: 20px;
+}  
+.major .column.is-right .card .content {
+  padding-right: 200px;
+  padding-left: 20px;
+}  
+
 
 .major .column .card .content .title {
-  width: 82.5px;
-  height: 20px;
   font-family: 'FC Lamoon';
   font-size: 35px;
   font-weight: bold;
@@ -198,8 +217,8 @@ h1 {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
   color: #0d0d0b;
+  margin: 20px 0 0;
 }
 
 .major .column .card .content .skill {
@@ -208,10 +227,15 @@ h1 {
   -moz-columns: 2;
   padding: 0;
   list-style: none;
+}
+.major .column.is-left .card .content .skill{
   margin-right: 40px;
 }
+.major .column.is-right .card .content .skill{
+  margin-left: 40px;
+}
 
-@media screen and (max-width: 769px), print {
+@media screen and (max-width: 1200px), print {
   .major .heading {
     width: 80%;
     margin: auto auto;
@@ -219,9 +243,11 @@ h1 {
   .major .container {
     flex-direction: column;
   }
-
-  .major .column {
-    width: auto;
-    box-sizing: border-box;
+  .major .column.is-left {
+    align-self: flex-start;
+  }
+  .major .column.is-right {
+    align-self: flex-end;
+    margin-top: 40px;
   }
 }
