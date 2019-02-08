@@ -50,7 +50,12 @@ async function takeScreenshot(browser, url, width, height, filename) {
     const target = '__screenshots__/' + filename
     await page.setViewport({ width, height })
     await page.goto(url)
-    await page.screenshot({ path: tmpName })
+    const bbox = await (await page.$(':root')).boundingBox()
+    await page.screenshot({
+      path: tmpName,
+      clip: { x: 0, y: 0, width: bbox.width, height: bbox.height },
+      type: 'png',
+    })
     log.info({ url, width, height, tmpName }, 'Taken page screenshot.')
     if (!fs.existsSync(target)) {
       log.info('Create: "%s"', target)
@@ -59,11 +64,17 @@ async function takeScreenshot(browser, url, width, height, filename) {
     } else {
       const existingImage = await jimp.read(target)
       const latestImage = await jimp.read(tmpName)
-      const diff = jimp.diff(existingImage, latestImage)
-      const threshold = 0.001
-      if (diff.percent > threshold) {
+      const isDifferent = (a, b) => {
+        if (a.bitmap.width !== b.bitmap.width) return true
+        if (a.bitmap.height !== b.bitmap.height) return true
+        const diff = jimp.diff(a, b)
+        const threshold = 0.001
+        log.info({ diffPercent: diff.percent }, 'Compared images')
+        return diff.percent > threshold
+      }
+      if (isDifferent(existingImage, latestImage)) {
         fs.copyFileSync(tmpName, target)
-        log.info({ diffPercent: diff.percent }, 'Update: "%s"', target)
+        log.info('Update: "%s"', target)
         return false
       } else {
         log.info('Already up-to-date: "%s"', target)
