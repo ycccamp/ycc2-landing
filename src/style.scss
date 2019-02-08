@@ -181,13 +181,17 @@ h1 {
 
 .major .column .card .content {
   padding-left: 130px;
+  width: 60%;
+  margin: auto auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .major .column .card .content .title {
   width: 82.5px;
-  height: 15px;
+  height: 20px;
   font-family: 'FC Lamoon';
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
