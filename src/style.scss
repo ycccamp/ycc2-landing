@@ -43,7 +43,7 @@ h1 {
   position: relative;
 }
 .white-section .container {
-  max-width: 700px;
+  max-width: 1200px;
   margin: auto auto;
   text-align: center;
 }
@@ -138,6 +138,9 @@ h1 {
 }
 
 // About Section
+.about .container {
+  width: 700px;
+}
 .about .concept {
   font-size: 1.8rem;
 }
@@ -293,4 +296,33 @@ h1 {
     align-self: flex-end;
     margin-top: 40px;
   }
+}
+
+// Timeline Section
+.timeline .grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.timeline .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;  
+}
+.timeline .card > .circle {
+  background:#7da7d9;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
+.timeline .card > .detail {
+  font-family: 'FC Lamoon';
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 7px;
+}
+.timeline .card > .datetime {
+  font-size: 1.4rem;
+  color: #0d0d0b;
 }
