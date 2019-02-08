@@ -330,3 +330,13 @@ h1 {
   font-size: 1.4rem;
   color: #0d0d0b;
 }
+@media screen and (max-width: 1200px), print {
+  .timeline .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 570px), print {
+  .timeline .grid {
+    grid-template-columns: 1fr;
+  }
+}
