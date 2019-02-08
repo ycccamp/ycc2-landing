@@ -214,7 +214,7 @@ h1 {
 .major .column.is-right .card .content {
   padding-right: 200px;
   padding-left: 20px;
-}  
+}
 
 .major .column .card .content .title {
   font-family: 'FC Lamoon';
@@ -245,6 +245,11 @@ h1 {
 }
 
 @media screen and (max-width: 570px), print {
+  .major .column .image {
+    width: 150px;
+    top: -20px;
+  }
+
   .major .column .card .content .title {
     font-size: 28px;
   }
@@ -253,9 +258,12 @@ h1 {
     font-size: 1rem;
   }
 
-  .major .column .image {
-    width: 180px;
-    top: -30px;
+  .major .column.is-left .card .content {
+    padding-left: 150px;
+  }
+  
+  .major .column.is-right .card .content {
+    padding-right: 150px;
   }
 }
 
