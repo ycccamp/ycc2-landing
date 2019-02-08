@@ -1,8 +1,8 @@
 body {
   margin: 0;
   background: black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'CS ChatThai', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 @font-face {
@@ -44,13 +44,16 @@ h1 {
   position: relative;
   z-index: 999;
 }
+
 .heading.inline {
   display: inline-block;
 }
+
 .heading span {
   position: relative;
   z-index: 999;
 }
+
 .heading > .ellipse {
   width: 90px;
   height: 90px;
@@ -61,9 +64,23 @@ h1 {
   background: url(/img/ellipse.png) no-repeat center center;
   background-size: contain;
 }
+
 .content {
   font-family: 'CS ChatThai';
   font-size: 1.4rem;
+}
+
+.register-btn {
+  font-family: 'FC Lamoon';
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+  padding: 7px 40px;
+  border-radius: 13.5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
+  background-color: #ffffff;
+  display: inline-block;
+  cursor: pointer;
 }
 
 // Top landing page section
@@ -73,7 +90,7 @@ h1 {
   background: linear-gradient(to top, #99ccff, #ffffff);
 }
 .landing h1 {
-  line-height: 20px;
+  line-height: 50px;
 }
 .landing p {
   font-family: 'FC Lamoon';
@@ -91,18 +108,8 @@ h1 {
   width: 280px;
   margin-bottom: 30px;
 }
-.landing .register {
-  font-family: 'FC Lamoon';
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: black;
-  padding: 7px 40px;
-  border-radius: 13.5px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
-  background-color: #ffffff;
-  display: inline-block;
+.landing .register-btn {
   margin-top: 50px;
-  cursor: pointer;
 }
 .landing .countdown {
   margin-top: 50px;
@@ -122,35 +129,166 @@ h1 {
 // About Section
 .about {
   background: white;
-  width: 100vw;
-  padding: 50px 0;
+  padding: 50px 10px;
   position: relative;
 }
 .about .container {
-  width: 700px;
+  max-width: 700px;
   margin: auto auto;
   text-align: center;
 }
 .about .concept {
-  font-family: 'CS ChatThai';
   font-size: 1.8rem;
 }
 .about .bubble {
   width: 100%;
   position: absolute;
   bottom: 0;
+  left: 0;
   transform: translateY(100%);
 }
 
 // Major Section
 .major {
-  width: 100vw;
+  width: 100%;
   padding: 70px 0;
   background: linear-gradient(to bottom, #99ccff, #d9ecff);
 }
-.major .container {
-  width: 80%;
-  position: relative;
-  z-index: 999;
+
+.major .heading {
+  width: 90%;
   margin: auto auto;
+  text-align: center;
+}
+
+.major .container {
+  display: block;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.major .column {
+  flex-basis: 50%;
+  max-width: 680px;
+  padding: 10px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.major .column.is-left {
+  text-align: left;
+}
+
+.major .column.is-right {
+  text-align: right;
+  margin-top: 0;
+}
+
+.major .column .image {
+  position: absolute;
+  z-index: 2;
+  width: 200px;
+  top: -30px;
+}
+
+.major .column.is-left .image {
+  left: 0;
+}
+
+.major .column.is-right .image {
+  right: 0;
+}
+
+.major .column .card {
+  border-radius: 1000px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.major .column .card .content {
+  margin: auto auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.major .column.is-left .card .content {
+  padding-left: 200px;
+  padding-right: 30px;
+  margin-right: 25px;
+}
+
+.major .column.is-right .card .content {
+  padding-right: 200px;
+  padding-left: 30px;
+  margin-left: 25px;
+}
+
+.major .column .card .content .title {
+  font-family: 'FC Lamoon';
+  font-size: 35px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0d0d0b;
+  margin: 20px 0 0;
+}
+
+.major .column .card .content .register-btn {
+  margin-bottom: 20px;
+}
+
+.major .column.is-left .card .content .register-btn{
+  margin-right: 40px;
+}
+
+.major .column.is-right .card .content .register-btn{
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 570px), print {
+  .major .column .image {
+    width: 150px;
+    top: -20px;
+  }
+
+  .major .column .card .content .title {
+    font-size: 28px;
+  }
+
+  .major .column .card .content {
+    font-size: 1rem;
+  }
+
+  .major .column.is-left .card .content {
+    padding-left: 150px;
+  }
+  
+  .major .column.is-right .card .content {
+    padding-right: 150px;
+  }
+}
+
+@media screen and (max-width: 1200px), print {
+  .major .heading {
+    width: 80%;
+    margin: auto auto;
+  }
+
+  .major .container {
+    flex-direction: column;
+  }
+
+  .major .column.is-left {
+    align-self: flex-start;
+  }
+
+  .major .column.is-right {
+    align-self: flex-end;
+    margin-top: 40px;
+  }
 }
