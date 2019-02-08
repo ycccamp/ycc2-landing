@@ -302,6 +302,7 @@ h1 {
 .timeline .grid {
   display: grid;
   grid-gap: 30px;
+  margin-top: 50px;
   grid-template-columns: repeat(4, 1fr);
 }
 .timeline .card {
@@ -315,6 +316,9 @@ h1 {
   border-radius: 50%;
   width: 180px;
   height: 180px;
+}
+.timeline .card > .circle.active {
+  background: #f49ac1;
 }
 .timeline .card > .detail {
   font-family: 'FC Lamoon';
