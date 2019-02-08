@@ -44,13 +44,16 @@ h1 {
   position: relative;
   z-index: 999;
 }
+
 .heading.inline {
   display: inline-block;
 }
+
 .heading span {
   position: relative;
   z-index: 999;
 }
+
 .heading > .ellipse {
   width: 90px;
   height: 90px;
@@ -61,9 +64,23 @@ h1 {
   background: url(/img/ellipse.png) no-repeat center center;
   background-size: contain;
 }
+
 .content {
   font-family: 'CS ChatThai';
   font-size: 1.4rem;
+}
+
+.register-btn {
+  font-family: 'FC Lamoon';
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+  padding: 7px 40px;
+  border-radius: 13.5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
+  background-color: #ffffff;
+  display: inline-block;
+  cursor: pointer;
 }
 
 // Top landing page section
@@ -91,18 +108,8 @@ h1 {
   width: 280px;
   margin-bottom: 30px;
 }
-.landing .register {
-  font-family: 'FC Lamoon';
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: black;
-  padding: 7px 40px;
-  border-radius: 13.5px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
-  background-color: #ffffff;
-  display: inline-block;
+.landing .register-btn {
   margin-top: 50px;
-  cursor: pointer;
 }
 .landing .countdown {
   margin-top: 50px;
@@ -137,6 +144,7 @@ h1 {
   width: 100%;
   position: absolute;
   bottom: 0;
+  left: 0;
   transform: translateY(100%);
 }
 
@@ -230,19 +238,15 @@ h1 {
   margin: 20px 0 0;
 }
 
-.major .column .card .content .skill {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  padding: 0;
-  list-style: none;
+.major .column .card .content .register-btn {
+  margin-bottom: 20px;
 }
 
-.major .column.is-left .card .content .skill{
+.major .column.is-left .card .content .register-btn{
   margin-right: 40px;
 }
 
-.major .column.is-right .card .content .skill{
+.major .column.is-right .card .content .register-btn{
   margin-left: 40px;
 }
 
