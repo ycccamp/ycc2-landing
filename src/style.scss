@@ -166,21 +166,24 @@ h1 {
   width: 46%;
   padding: 10px;
   margin: 0 10px;
+  position: relative;
 }
 
 .major .column .image {
   position: absolute;
   z-index: 2;
+  width: 200px;
+  top: -30px;
 }
 
 .major .column .card {
-  border-radius: 78.8px;
+  border-radius: 1000px;
   background-color: #ffffff;
   z-index: 1;
 }
 
 .major .column .card .content {
-  padding-left: 130px;
+  padding-left: 200px;
   width: 60%;
   margin: auto auto;
   padding-top: 10px;
@@ -206,6 +209,8 @@ h1 {
   -webkit-columns: 2;
   -moz-columns: 2;
   padding: 0;
+  list-style: none;
+  margin-right: 40px;
 }
 
 @media screen and (max-width: 769px), print {
@@ -218,6 +223,7 @@ h1 {
   }
 
   .major .column {
-    width: 92%;
+    width: auto;
+    box-sizing: border-box;
   }
 }
