@@ -50,7 +50,12 @@ async function takeScreenshot(browser, url, width, height, filename) {
     const target = '__screenshots__/' + filename
     await page.setViewport({ width, height })
     await page.goto(url)
-    await page.screenshot({ path: tmpName, fullPage: true })
+    const bbox = await (await page.$(':root')).boundingBox()
+    await page.screenshot({
+      path: tmpName,
+      clip: { x: 0, y: 0, width: bbox.width, height: bbox.height },
+      type: 'png',
+    })
     log.info({ url, width, height, tmpName }, 'Taken page screenshot.')
     if (!fs.existsSync(target)) {
       log.info('Create: "%s"', target)
