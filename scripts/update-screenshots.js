@@ -48,7 +48,7 @@ async function takeScreenshot(browser, url, width, height, filename) {
   try {
     const tmpName = tmp.tmpNameSync({ postfix: '.png' })
     const target = '__screenshots__/' + filename
-    await page.setViewport({ width, height })
+    await page.setViewport({ width, height, fullPage: true })
     await page.goto(url)
     await page.screenshot({ path: tmpName })
     log.info({ url, width, height, tmpName }, 'Taken page screenshot.')
