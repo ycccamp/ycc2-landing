@@ -162,18 +162,31 @@ h1 {
   list-style: none;
 }
 
-.major .card {
+.major .column {
   width: 46%;
   padding: 10px;
   margin: 0 10px;
-  border-radius: 78.8px;
-  background-color: #ffffff;
 }
 
-.major .card .title {
+.major .column .image {
+  position: absolute;
+  z-index: 2;
+}
+
+.major .column .card {
+  border-radius: 78.8px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.major .column .card .content {
+  padding-left: 130px;
+}
+
+.major .column .card .content .title {
   width: 82.5px;
   height: 15px;
-  font-family: FCLamoon;
+  font-family: 'FC Lamoon';
   font-size: 24px;
   font-weight: bold;
   font-style: normal;
@@ -184,6 +197,12 @@ h1 {
   color: #0d0d0b;
 }
 
+.major .column .card .content .skill {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
 @media screen and (max-width: 769px), print {
   .major .heading {
     width: 80%;
@@ -192,9 +211,8 @@ h1 {
   .major .container {
     flex-direction: column;
   }
-  
-  .major .card {
+
+  .major .column {
     width: 92%;
-    margin: 20px 10px;
   }
 }
