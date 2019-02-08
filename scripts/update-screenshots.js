@@ -64,11 +64,12 @@ async function takeScreenshot(browser, url, width, height, filename) {
         if (a.bitmap.height !== b.bitmap.height) return true
         const diff = jimp.diff(a, b)
         const threshold = 0.001
+        log.info({ diffPercent: diff.percent }, 'Compared images')
         return diff.percent > threshold
       }
       if (isDifferent(existingImage, latestImage)) {
         fs.copyFileSync(tmpName, target)
-        log.info({ diffPercent: diff.percent }, 'Update: "%s"', target)
+        log.info('Update: "%s"', target)
         return false
       } else {
         log.info('Already up-to-date: "%s"', target)
