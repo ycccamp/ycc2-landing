@@ -146,11 +146,13 @@ h1 {
   padding: 70px 0;
   background: linear-gradient(to bottom, #99ccff, #d9ecff);
 }
+
 .major .heading {
   width: 90%;
   margin: auto auto;
   text-align: center;
 }
+
 .major .container {
   display: block;
   max-width: 1200px;
@@ -167,9 +169,11 @@ h1 {
   margin: 0 10px;
   position: relative;
 }
+
 .major .column.is-left {
   text-align: left;
 }
+
 .major .column.is-right {
   text-align: right;
   margin-top: 0;
@@ -181,9 +185,11 @@ h1 {
   width: 200px;
   top: -30px;
 }
+
 .major .column.is-left .image {
   left: 0;
 }
+
 .major .column.is-right .image {
   right: 0;
 }
@@ -199,15 +205,16 @@ h1 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .major .column.is-left .card .content {
   padding-left: 200px;
   padding-right: 20px;
-}  
+}
+
 .major .column.is-right .card .content {
   padding-right: 200px;
   padding-left: 20px;
 }  
-
 
 .major .column .card .content .title {
   font-family: 'FC Lamoon';
@@ -228,11 +235,28 @@ h1 {
   padding: 0;
   list-style: none;
 }
+
 .major .column.is-left .card .content .skill{
   margin-right: 40px;
 }
+
 .major .column.is-right .card .content .skill{
   margin-left: 40px;
+}
+
+@media screen and (max-width: 570px), print {
+  .major .column .card .content .title {
+    font-size: 28px;
+  }
+
+  .major .column .card .content {
+    font-size: 1rem;
+  }
+
+  .major .column .image {
+    width: 180px;
+    top: -30px;
+  }
 }
 
 @media screen and (max-width: 1200px), print {
@@ -240,12 +264,15 @@ h1 {
     width: 80%;
     margin: auto auto;
   }
+
   .major .container {
     flex-direction: column;
   }
+
   .major .column.is-left {
     align-self: flex-start;
   }
+
   .major .column.is-right {
     align-self: flex-end;
     margin-top: 40px;
