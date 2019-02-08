@@ -1,3 +1,6 @@
+:root[data-test] {
+  width: var(--viewport-width);
+}
 body {
   margin: 0;
   background: black;
@@ -71,6 +74,9 @@ h1 {
   position: relative;
   height: 100vh;
   background: linear-gradient(to top, #99ccff, #ffffff);
+}
+:root[data-test] .landing {
+  height: var(--viewport-height);
 }
 .landing h1 {
   line-height: 20px;
