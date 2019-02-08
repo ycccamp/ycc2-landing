@@ -37,6 +37,17 @@ h1 {
   margin: 0;
 }
 
+.white-section {
+  background: white;
+  padding: 50px 10px;
+  position: relative;
+}
+.white-section .container {
+  max-width: 700px;
+  margin: auto auto;
+  text-align: center;
+}
+
 .heading {
   font-family: 'FC Lamoon';
   font-size: 3.2rem;
@@ -127,16 +138,6 @@ h1 {
 }
 
 // About Section
-.about {
-  background: white;
-  padding: 50px 10px;
-  position: relative;
-}
-.about .container {
-  max-width: 700px;
-  margin: auto auto;
-  text-align: center;
-}
 .about .concept {
   font-size: 1.8rem;
 }
