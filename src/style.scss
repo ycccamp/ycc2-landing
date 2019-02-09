@@ -97,6 +97,7 @@ h1 {
 .landing {
   position: relative;
   height: 100vh;
+  min-height: 800px;
   background: linear-gradient(to top, #99ccff, #ffffff);
 }
 .landing h1 {
