@@ -139,8 +139,17 @@ h1 {
 
 // About Section
 .about .container {
-  width: 700px;
+  // width: 700px;
+  padding: 0 2.8em;
+  word-break: break-word;
 }
+
+@media (max-width: 780px) {
+  .about .container {
+    padding: 0 1em;
+  }
+}
+
 .about .concept {
   font-size: 1.8rem;
 }
@@ -247,11 +256,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-.major .column.is-left .card .content .register-btn{
+.major .column.is-left .card .content .register-btn {
   margin-right: 40px;
 }
 
-.major .column.is-right .card .content .register-btn{
+.major .column.is-right .card .content .register-btn {
   margin-left: 40px;
 }
 
@@ -272,7 +281,7 @@ h1 {
   .major .column.is-left .card .content {
     padding-left: 150px;
   }
-  
+
   .major .column.is-right .card .content {
     padding-right: 150px;
   }
@@ -309,10 +318,10 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;  
+  text-align: center;
 }
 .timeline .card > .circle {
-  background:#7da7d9;
+  background: #7da7d9;
   border-radius: 50%;
   width: 180px;
   height: 180px;
