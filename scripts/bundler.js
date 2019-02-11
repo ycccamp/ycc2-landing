@@ -7,13 +7,15 @@ const distDir = path.resolve(__dirname, '../dist')
 const srcDir = path.resolve(__dirname, '../src')
 const staticDir = path.resolve(__dirname, '../static')
 
+const entryFiles = './src/*.html'
+
 const options = {
   outDir: distDir,
   outFile: 'index.html',
   publicUrl: '/',
 }
 
-const bundler = new Bundler(path.join(srcDir, 'index.html'), options)
+const bundler = new Bundler(entryFiles, options)
 
 exports.serve = () => bundler.serve()
 exports.bundle = async () => {
