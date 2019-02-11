@@ -354,6 +354,68 @@ h1 {
   }
 }
 
+// Footer section
+
+.footer {
+  width: 100%;
+  padding: 70px 0;
+  background-color: #555555;
+  position: relative;
+}
+
+.footer .background {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-color: #555555;
+  z-index: 0;
+}
+
+.footer .social {
+  position: relative;
+  z-index: 1;
+  width: 20%;
+  margin: 20px auto auto auto;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer .social .social-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto auto;
+  height: 80px;
+}
+
+.footer .social .social-image {
+  width: auto;
+  height: 100%;
+}
+
+.footer .copyrights {
+  display: block;
+  position: relative;
+  margin-top: 40px;
+  z-index: 1;
+  font-family: 'FC Lamoon';
+  font-size: 25px;
+}
+
+
+@media screen and (max-width: 800), print {
+  .footer .social {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 570px), print {
+  .footer .social {
+    width: 70%;
+  }
+}
+
 // sponsor page
 
 .mega-heading {
