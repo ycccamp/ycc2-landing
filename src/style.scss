@@ -120,8 +120,11 @@ h1 {
   margin-bottom: 30px;
 }
 .landing .register-btn {
-  background-color: #fff66d;
   margin-top: 50px;
+}
+.landing .register-btn,
+.register-btn.yellow {
+  background-color: #fff66d;
 }
 .landing .countdown {
   margin-top: 50px;
@@ -410,5 +413,177 @@ h1 {
 @media screen and (max-width: 570px), print {
   .footer .social {
     width: 70%;
+  }
+}
+
+// sponsor page
+
+.mega-heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.about .content,
+.about .row {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sponsor-page h3 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.row {
+  display: table;
+  width: 100%;
+}
+.row .col {
+  display: table-cell;
+}
+.row .col .content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.package-table-container,
+.donate-container {
+  max-width: 500px;
+  margin: 30px auto 0 auto;
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.package-table th,
+.package-table td{
+  font-size: 1.5rem;
+  padding: 10px 0 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+.package-table tr:last-child th,
+.package-table tr:last-child td {
+  border-bottom: 0;
+}
+.package-table th {
+  text-align: right;
+}
+.donate-container {
+  text-align: center;
+  padding: 10px 20px 20px 20px;
+}
+.donate-container p {
+  font-size: 1.3rem;
+  padding: 0 10px;
+  color: #444;
+}
+.donate-container p.small {
+  font-size: 1.1rem;
+}
+.donate-container h3 {
+  font-family: "FC Lamoon";
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+.donate-container .line {
+  border-bottom: 1px solid #eee;
+  margin: 18px 0;
+}
+.donate-container a {
+  color: #0079ff;
+  text-decoration: none;
+}
+.donate-container a:hover {
+  color: #0865cc;
+}
+.major.donate .container {
+  margin-top: 0;
+}
+.icon-tick {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('/img/icon-tick.png') center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  vertical-align: middle;
+}
+.benefit-packages {
+  overflow-x: auto;
+}
+.benefit-table {
+  width: 100%;
+  max-width: 900px;
+  min-width: 500px;
+  margin: 30px auto 0 auto;
+}
+.benefit-table td, .benefit-table th{
+  font-size: 1.3rem;
+  padding: 6px 10px;
+}
+.benefit-table tbody th {
+  border-top: 1px solid #eee;
+  text-align: right;
+  color: #555;
+}
+.benefit-table tbody td {
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+.sponsor-progress {
+  margin-top: 80px;
+  margin-bottom: 70px;
+  width: 700px;
+  position: relative;
+}
+.sponsor-progress .progress-bar {
+  height: 20px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.5);
+}
+.sponsor-progress .label {
+  position: absolute;
+  text-align: left;
+  line-height: 0.8;
+  padding-left: 5px;
+}
+.sponsor-progress .label0 {
+  border-left: 1px solid #5c95ce;
+  color: #5c95ce;
+  padding-top: 26px;
+  top: 0;
+}
+.sponsor-progress .label165 {
+  border-left: 1px solid #9753d2;
+  color: #9753d2;
+  padding-bottom: 26px;
+  bottom: 0;
+  left: 30%;
+}
+.sponsor-progress .label200 {
+  border-left: 1px solid #e07e65;
+  color: #e07e65;
+  padding-top: 26px;
+  left: 60%;
+  top: 0;
+}
+.sponsor-progress .label300 {
+  border-right: 1px solid #e0657a;
+  color: #e0657a;
+  padding-bottom: 26px;
+  padding-left: 0;
+  padding-right: 5px;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}
+@media screen and (max-width: 786px) {
+  .row, .row .col {
+    display: block;
+  }
+  .row .col {
+    width: 100% !important;
+  }
+  .row .col .content {
+    padding: 0;
+  }
+  .sponsor-progress {
+    display: none;
   }
 }
