@@ -81,7 +81,7 @@ h1 {
   font-size: 1.4rem;
 }
 
-.register-btn {
+.register-btn, .white-btn {
   font-family: 'FC Lamoon';
   font-size: 1.6rem;
   text-decoration: none;
@@ -91,6 +91,9 @@ h1 {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
   display: inline-block;
   cursor: pointer;
+}
+.white-btn {
+  background-color: #fff;
 }
 
 // Top landing page section
@@ -450,6 +453,7 @@ h1 {
   padding: 20px 20px;
   border-radius: 10px;
   background-color: #fff;
+  margin-bottom: 50px;
 }
 .package-table th,
 .package-table td{
@@ -491,6 +495,9 @@ h1 {
 }
 .donate-container a:hover {
   color: #0865cc;
+}
+.major.donate {
+  padding-bottom: 20px;
 }
 .major.donate .container {
   margin-top: 0;
@@ -572,6 +579,142 @@ h1 {
   right: 0;
   bottom: 0;
   text-align: right;
+}
+.profile-image {
+  width: 180px;
+  height: 180px;
+}
+.profile-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+.sponsor-page .role {
+  display: block;
+  color: #777;
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+.social-icons {
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+}
+.social-icons li {
+  display: inline-block;
+}
+.social-icons li a {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 20px;
+}
+.social-icon-messenger a {
+  color: #037FFF;
+}
+.social-icon-email a {
+  color: #f16086;
+}
+.social-icon-phone a {
+  color: #5fade8;
+}
+
+.download-sponsor-doc {
+  text-decoration: none;
+  color: #888;
+  font-size: 20px;
+  display: block;
+  margin-top: 10px;
+}
+.download-sponsor-doc:hover {
+  color: #0079ff;
+}
+.bank-info {
+  display: table;
+  text-align: left;
+  margin: 20px auto -2px auto;
+}
+.bank-qr,.bank-info p {
+  display: table-cell;
+  vertical-align: middle;
+}
+.bank-qr {
+  width: 80px;
+  height: auto;
+}
+.bank-info p {
+  margin: 0;
+}
+.bank-info:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/**
+ * Tooltip Styles
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 8px 7px 6px 7px;
+  width: 180px;  
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.8);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 16px;
+  line-height: 0.9;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
 }
 @media screen and (max-width: 786px) {
   .row, .row .col {
