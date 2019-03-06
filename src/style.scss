@@ -81,7 +81,8 @@ h1 {
   font-size: 1.4rem;
 }
 
-.register-btn, .white-btn {
+.register-btn,
+.white-btn {
   font-family: 'FC Lamoon';
   font-size: 1.6rem;
   text-decoration: none;
@@ -407,7 +408,6 @@ h1 {
   font-size: 25px;
 }
 
-
 @media screen and (max-width: 800), print {
   .footer .social {
     width: 50%;
@@ -456,7 +456,7 @@ h1 {
   margin-bottom: 50px;
 }
 .package-table th,
-.package-table td{
+.package-table td {
   font-size: 1.5rem;
   padding: 10px 0 10px 20px;
   border-bottom: 1px solid #eee;
@@ -481,7 +481,7 @@ h1 {
   font-size: 1.1rem;
 }
 .donate-container h3 {
-  font-family: "FC Lamoon";
+  font-family: 'FC Lamoon';
   font-size: 1.7rem;
   font-weight: normal;
 }
@@ -520,7 +520,8 @@ h1 {
   min-width: 500px;
   margin: 30px auto 0 auto;
 }
-.benefit-table td, .benefit-table th{
+.benefit-table td,
+.benefit-table th {
   font-size: 1.3rem;
   padding: 6px 10px;
 }
@@ -540,9 +541,10 @@ h1 {
   position: relative;
 }
 .sponsor-progress .progress-bar {
+  width: 20%;
   height: 20px;
   border-radius: 5px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .sponsor-progress .label {
   position: absolute;
@@ -610,7 +612,7 @@ h1 {
   font-size: 20px;
 }
 .social-icon-messenger a {
-  color: #037FFF;
+  color: #037fff;
 }
 .social-icon-email a {
   color: #f16086;
@@ -634,7 +636,8 @@ h1 {
   text-align: left;
   margin: 20px auto -2px auto;
 }
-.bank-qr,.bank-info p {
+.bank-qr,
+.bank-info p {
   display: table-cell;
   vertical-align: middle;
 }
@@ -665,8 +668,8 @@ h1 {
 [data-tooltip]:before,
 [data-tooltip]:after {
   visibility: hidden;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
   opacity: 0;
   pointer-events: none;
 }
@@ -679,7 +682,7 @@ h1 {
   margin-bottom: 5px;
   margin-left: -80px;
   padding: 8px 7px 6px 7px;
-  width: 180px;  
+  width: 180px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -703,7 +706,7 @@ h1 {
   border-top: 5px solid hsla(0, 0%, 20%, 0.9);
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
-  content: " ";
+  content: ' ';
   font-size: 0;
   line-height: 0;
 }
@@ -712,12 +715,13 @@ h1 {
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
   visibility: visible;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
   opacity: 1;
 }
 @media screen and (max-width: 786px) {
-  .row, .row .col {
+  .row,
+  .row .col {
     display: block;
   }
   .row .col {
