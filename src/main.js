@@ -51,5 +51,5 @@ function countdown(endDate) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  countdown('2019-03-11')
+  countdown(1552323540000)
 })
