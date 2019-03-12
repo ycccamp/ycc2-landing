@@ -51,5 +51,5 @@ function countdown(endDate) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  countdown(1552323540000)
+  countdown(1552669140000)
 })
