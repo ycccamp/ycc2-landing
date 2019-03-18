@@ -1,5 +1,3 @@
-var scroll = new SmoothScroll('a[href*="#"]')
-
 function countdown(endDate) {
   let timer, days, hours, minutes, seconds
 
@@ -50,6 +48,6 @@ function countdown(endDate) {
   timer = setInterval(calculate, 1000)
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  countdown(1552669140000)
-})
+// document.addEventListener('DOMContentLoaded', function() {
+//   countdown(1552669140000)
+// })

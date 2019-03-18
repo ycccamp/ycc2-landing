@@ -93,9 +93,36 @@
           </div>
         </div> -->
 
-        <a class="register-btn" href="#major-section" data-scroll>ประกาศรายชื่อผู้เข้ารอบ</a>
+        <a class="register-btn" data-toggle="modal" data-target="#announce">ประกาศรายชื่อผู้เข้ารอบ</a>
       </div>
       <img class="bubble" src="img/bubble-top.png" alt="bubble" />
+    </div>
+
+    <div class="modal fade" id="announce" tabindex="-1" role="dialog" aria-labelledby="announce" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title small-heading">ประกาศรายชื่อผู้เข้ารอบ</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="programming-tab" data-toggle="tab" href="#programming" role="tab" aria-controls="home" aria-selected="true">Programming</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="profile" aria-selected="false">Design</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="programming" role="tabpanel" aria-labelledby="programming-tab">...</div>
+              <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">...sdasd</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- About Section -->
