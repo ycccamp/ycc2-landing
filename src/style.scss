@@ -372,6 +372,64 @@ h1 {
   }
 }
 
+// Sponsor section
+.sponsor {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #99ccff, #d9ecff);
+}
+
+.sponsor > h1 {
+  font-size: 3.2rem;
+  font-weight: lighter;
+  margin-bottom: 40px;
+}
+
+.sponsor > h2 {
+  text-decoration: underline;
+}
+
+.sponsor > .row {
+  display: flex;
+  width: 100%;
+  margin: 25px 0;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 570px), print {
+  .platinum {
+    max-width: 350px;
+  }
+
+  .sliver {
+    max-width: 200px;
+  }
+
+  .bronze {
+    max-width: 200px;
+  }
+}
+
+.platinum {
+  max-height: 250px;
+}
+
+.sliver {
+  max-height: 250px;
+  max-width: 300px;
+}
+
+.bronze {
+  max-height: 100px;
+  max-width: 200px;
+}
+
 // Footer section
 
 .footer {
