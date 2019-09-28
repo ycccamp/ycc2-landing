@@ -1009,6 +1009,11 @@
     "@styled-system/core" "^5.1.2"
     "@styled-system/css" "^5.0.23"
 
+"@types/lodash@^4.14.141":
+  version "4.14.141"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.141.tgz#d81f4d0c562abe28713406b571ffb27692a82ae6"
+  integrity sha512-v5NYIi9qEbFEUpCyikmnOYe4YlP8BMUdTcNCAquAKzu+FA7rZ1onj9x80mbnDdOW/K5bFf3Tv5kJplP33+gAbQ==
+
 "@types/node@^12.7.8":
   version "12.7.8"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.8.tgz#cb1bf6800238898bc2ff6ffa5702c3cadd350708"
