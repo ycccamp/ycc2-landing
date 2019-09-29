@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AppComponent = props => {
+const AppComponent: React.FC = props => {
   const {children} = props
 
   return (
