@@ -3,6 +3,8 @@ import React from 'react'
 import { Box } from 'rebass'
 import styled, { createGlobalStyle } from 'styled-components'
 
+import SEO from './seo'
+
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'FC Lamoon';
@@ -69,6 +71,7 @@ const AppComponent: React.FC = props => {
   return (
     <FullHeightBox>
       <GlobalStyle />
+      <SEO />
       {children}
     </FullHeightBox>
   )
