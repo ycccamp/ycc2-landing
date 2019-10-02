@@ -12,7 +12,9 @@ const ComingSoonComponent: React.FC = () => {
     <FullHeightFlex justifyContent={`center`} alignItems={`center`}>
       <Box>
         <Flex justifyContent={`center`}>
-          <Image width={[14 / 24, 12 / 24, 10 / 24, 8 / 24]} src={`/static/images/ycclogo.png`} />
+          <Box width={[14 / 24, 12 / 24, 10 / 24, 8 / 24]}>
+            <Image src={`/static/images/ycclogo.png`} />
+          </Box>
         </Flex>
         <Box px={3} py={2}>
           <Text textAlign={`center`} fontWeight={100} fontSize={52}>Young Creator's Camp</Text>
