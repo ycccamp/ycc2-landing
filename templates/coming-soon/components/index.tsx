@@ -1,10 +1,14 @@
 import React from 'react'
 
-import { Flex, Box, Image, Text, Heading } from 'rebass'
+import { Flex, Box, Image, Text } from 'rebass'
 import styled from 'styled-components'
 
 const FullHeightFlex = styled(Flex)`
   height: 100% !important;
+`
+
+const FullHeightBox = styled(Box)`
+  height: 100%;
 `
 
 const ComingSoonComponent: React.FC = () => {
