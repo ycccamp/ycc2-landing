@@ -1,15 +1,31 @@
 {
-  "devDependencies": {
-    "express": "^4.16.4",
-    "jimp": "^0.6.0",
-    "parcel-bundler": "^1.11.0",
-    "pino": "^5.11.1",
-    "pino-pretty": "^2.5.0",
-    "puppeteer": "^1.11.0",
-    "rimraf": "^2.6.3",
-    "sass": "^1.17.0",
-    "tmp": "^0.0.33",
-    "vinyl-fs": "^3.0.3",
-    "yargs": "^12.0.5"
+  "name": "ycc.in.th",
+  "version": "2019.926.0",
+  "description": "Frontpage of ycc.in.th",
+  "main": "index.js",
+  "repository": "https://github.com/ycccamp/ycc.in.th",
+  "author": "Phumrapee Limpianchop <contact@rayriffy.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@types/lodash": "^4.14.141",
+    "@types/node": "^12.7.8",
+    "@types/rebass": "^4.0.1",
+    "@types/styled-components": "^4.1.19",
+    "lodash": "^4.17.15",
+    "next": "^9.0.6",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "rebass": "^4.0.6",
+    "styled-components": "^4.4.0",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "deploy": "yarn build && yarn export",
+    "start": "next start"
   }
 }
