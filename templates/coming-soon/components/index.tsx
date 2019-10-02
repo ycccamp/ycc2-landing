@@ -7,10 +7,6 @@ const FullHeightFlex = styled(Flex)`
   height: 100% !important;
 `
 
-const FullHeightBox = styled(Box)`
-  height: 100%;
-`
-
 const ComingSoonComponent: React.FC = () => {
   return (
     <FullHeightFlex justifyContent={`center`} alignItems={`center`}>
