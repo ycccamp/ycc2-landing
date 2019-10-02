@@ -1,12 +1,12 @@
-import Document, {Head, Main, NextScript} from 'next/document'
+import Document, { Head, Main, NextScript } from 'next/document'
 
-import {ServerStyleSheet} from 'styled-components'
+import { ServerStyleSheet } from 'styled-components'
 
 interface IProps {
   styleTags: string
 }
 
-export default class MyDocument extends Document<IProps> {
+class NextDocument extends Document<IProps> {
   static getInitialProps({renderPage}) {
     const sheet = new ServerStyleSheet()
     const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
@@ -27,3 +27,5 @@ export default class MyDocument extends Document<IProps> {
     )
   }
 }
+
+export default NextDocument

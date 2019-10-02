@@ -3,7 +3,7 @@ import App from 'next/app'
 
 import AppShell from '../app/components'
 
-class MyApp extends App {
+class NextApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
@@ -14,4 +14,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp
+export default NextApp
