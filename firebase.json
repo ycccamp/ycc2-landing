@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "site": "ycc2020",
+    "public": "out",
+    "trailingSlash": true,
+    "cleanUrls": true
+  }
+}

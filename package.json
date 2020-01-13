@@ -21,11 +21,20 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "deploy": "yarn build && yarn export",
-    "start": "next start"
+    "firebase": "firebase",
+    "start": "firebase serve --only hosting",
+    "test:types": "tsc",
+    "test:lint": "tslint 'src/**/*.{ts,tsx}'"
   },
   "devDependencies": {
     "@types/node": "^13.1.6",
+    "firebase-tools": "^7.11.0",
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "^2.1.0",
+    "tslint-react": "^4.1.0",
     "typescript": "^3.7.4"
   }
 }
