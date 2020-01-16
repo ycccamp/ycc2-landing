@@ -11,7 +11,9 @@ const HeadTitle: React.FC<IHeadTitleProps> = props => {
     <Head>
       <title>
         {title
-          ? `${typeof title === 'string' ? title : title.join(' · ')} | Young Creator's Camp`
+          ? `${
+              typeof title === 'string' ? title : title.join(' · ')
+            } | Young Creator's Camp`
           : `Young Creator's Camp`}
       </title>
     </Head>

@@ -1,13 +1,13 @@
-import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
+import React from 'react'
 
-import { CSSReset, ThemeProvider, theme, DefaultTheme } from '@chakra-ui/core'
+import { CSSReset, DefaultTheme, theme, ThemeProvider } from '@chakra-ui/core'
 
 import AppShell from '../app/components'
 
 class NextApp extends App {
-  render() {
+  public render() {
     const { Component, pageProps } = this.props
 
     const customTheme: DefaultTheme = {
