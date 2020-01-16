@@ -15,7 +15,8 @@
     "emotion-theming": "^10.0.27",
     "next": "^9.1.7",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.8.0"
   },
   "scripts": {
     "dev": "next",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^13.1.6",
+    "@types/react-icons": "^3.0.0",
     "firebase-tools": "^7.11.0",
     "prettier": "^1.19.1",
     "tslint": "^5.20.1",

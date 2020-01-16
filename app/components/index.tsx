@@ -1,9 +1,11 @@
 import React from 'react'
 
 import { Box } from '@chakra-ui/core'
+import { css, Global } from '@emotion/core'
 
 import HeadTitle from '../../core/components/HeadTitle'
 import Fonts from './fonts'
+import Navbar from './navbar'
 
 const AppComponent: React.FC = props => {
   const { children } = props
@@ -11,8 +13,18 @@ const AppComponent: React.FC = props => {
   return (
     <React.Fragment>
       <Fonts />
+      <Global
+        styles={css`
+          html,
+          body,
+          #__next {
+            height: 100%;
+          }
+        `}
+      />
       <HeadTitle />
-      <Box>{children}</Box>
+      <Navbar />
+      <Box height='100%'>{children}</Box>
     </React.Fragment>
   )
 }
