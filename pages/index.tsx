@@ -1,9 +1,9 @@
 import React from 'react'
 
-import ComingSoon from '../templates/coming-soon/components/index'
+import Front from '../templates/front-2020/components'
 
 const IndexPage: React.FC = () => {
-  return <ComingSoon />
+  return <Front />
 }
 
 export default IndexPage

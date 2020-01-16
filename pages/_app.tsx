@@ -14,7 +14,7 @@ class NextApp extends App {
       ...theme,
       fonts: {
         ...theme.fonts,
-        body: `'FC Lamoon', 'CS ChatThai', -apple-system, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif`,
+        body: `-apple-system, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif`,
       },
     }
 
