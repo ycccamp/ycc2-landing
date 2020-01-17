@@ -9,7 +9,8 @@ const Gallery: React.FC = props => {
       alignItems='center'
       py={12}
       bg='gray.200'
-      minHeight='100%'>
+      minHeight='100%'
+      id='gallery'>
       <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
         <Heading textAlign='center' size='xl' pb={4}>
           ภาพกิจกรรม

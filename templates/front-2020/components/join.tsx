@@ -19,7 +19,12 @@ const Join: React.FC = props => {
   ]
 
   return (
-    <Flex justifyContent='center' alignItems='center' minHeight='100%' py={12}>
+    <Flex
+      justifyContent='center'
+      alignItems='center'
+      minHeight='100%'
+      py={12}
+      id='join'>
       <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
         <Heading textAlign='center' size='xl' pb={4}>
           เลือกสาขา

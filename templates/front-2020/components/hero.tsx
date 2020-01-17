@@ -4,7 +4,12 @@ import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/core'
 
 const Hero: React.FC = props => {
   return (
-    <Flex justifyContent='center' alignItems='center' minHeight='100%' py={12}>
+    <Flex
+      justifyContent='center'
+      alignItems='center'
+      minHeight='100%'
+      py={12}
+      id='hero'>
       <Box px={4}>
         <Flex justifyContent='center'>
           <Image src='/static/images/ycclogo.png' size='2xs' />

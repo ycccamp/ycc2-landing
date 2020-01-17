@@ -6,7 +6,12 @@ import { Box, Flex, Heading, Link, Text } from '@chakra-ui/core'
 
 const Contact: React.FC = props => {
   return (
-    <Flex justifyContent='center' alignItems='center' minHeight='100%' py={12}>
+    <Flex
+      justifyContent='center'
+      alignItems='center'
+      minHeight='100%'
+      py={12}
+      id='contact'>
       <Box width={[22 / 24, 18 / 24, 14 / 24, 12 / 24]}>
         <Heading textAlign='center' size='xl' pb={4}>
           Contact Us
