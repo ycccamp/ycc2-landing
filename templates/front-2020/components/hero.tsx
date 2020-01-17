@@ -14,11 +14,13 @@ const Hero: React.FC = props => {
       id='hero'>
       <Box px={4}>
         <Flex justifyContent='center'>
-          <Image src='/static/images/ycclogo.png' size='2xs' />
+          <Box width={5 / 10}>
+            <Image src='/static/images/ycclogo-2020.png' />
+          </Box>
         </Flex>
         <Text
           as='h2'
-          pt={2}
+          pt={6}
           textAlign='center'
           fontWeight='bold'
           lineHeight='shorter'
