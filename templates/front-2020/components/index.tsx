@@ -6,6 +6,7 @@ import FAQ from './faq'
 import Gallery from './gallery'
 import Hero from './hero'
 import Join from './join'
+import Navbar from './navbar'
 import Schedule from './schedule'
 import Sponsor from './sponsor'
 import Venue from './venue'
@@ -13,6 +14,7 @@ import Venue from './venue'
 const FrontComponent: React.FC = props => {
   return (
     <React.Fragment>
+      <Navbar />
       <Hero />
       <About />
       <Join />

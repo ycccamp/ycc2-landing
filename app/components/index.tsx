@@ -5,7 +5,6 @@ import { css, Global } from '@emotion/core'
 
 import HeadTitle from '../../core/components/HeadTitle'
 import Fonts from './fonts'
-import Navbar from './navbar'
 
 const AppComponent: React.FC = props => {
   const { children } = props
@@ -23,7 +22,6 @@ const AppComponent: React.FC = props => {
         `}
       />
       <HeadTitle />
-      <Navbar />
       <Box height='100%'>{children}</Box>
     </React.Fragment>
   )
