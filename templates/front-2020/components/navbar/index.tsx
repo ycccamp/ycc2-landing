@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { FaBars } from 'react-icons/fa'
+import { Box, Flex, Stack } from '@chakra-ui/core'
 
-import { Box, Flex, IconButton, Stack } from '@chakra-ui/core'
-
+import Drawer from './drawer'
 import NavLink from './link'
 
 const Navbar: React.FC = props => {
@@ -40,7 +39,7 @@ const Navbar: React.FC = props => {
       boxShadow={['none', 'none', '0px 1px 5px 0px rgba(0, 0, 0, 0.2)']}
       position='fixed'
       zIndex={80}
-      bg='white'
+      bg={['transparent', 'transparent', 'white']}
       width='100%'
       fontSize={['xs', 'xs', 'xs', 'xs', 'sm']}>
       <Flex
@@ -59,9 +58,7 @@ const Navbar: React.FC = props => {
             ))}
           </Stack>
         </Flex>
-        <Box display={['block', 'block', 'none']} p={4}>
-          <IconButton aria-label='Menu' icon={FaBars} size='lg' />
-        </Box>
+        <Drawer items={nav} />
       </Flex>
     </Box>
   )
