@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { css, Global } from '@emotion/core'
+
 import About from './about'
 import Contact from './contact'
 import FAQ from './faq'
@@ -14,6 +16,13 @@ import Venue from './venue'
 const FrontComponent: React.FC = props => {
   return (
     <React.Fragment>
+      <Global
+        styles={css`
+          html {
+            scroll-behavior: smooth;
+          }
+        `}
+      />
       <Navbar />
       <Hero />
       <About />

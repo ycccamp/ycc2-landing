@@ -11,6 +11,7 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
+  Heading,
   IconButton,
   Link,
   Text,
@@ -43,26 +44,30 @@ const Drawer: React.FC<IDrawerProps> = props => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Menu</DrawerHeader>
           <DrawerBody>
-            {items.map((item, i) => {
-              return (
-                <Box key={`drawer-item-${i}`}>
-                  {i !== 0 ? <Divider /> : null}
-                  <Box py={1}>
-                    <Link href={`${item.href}`}>
-                      <Text
-                        fontSize='sm'
-                        color='gray.500'
-                        py={1}
-                        onClick={onClose}>
-                        {item.text}
-                      </Text>
-                    </Link>
+            <Heading size='2xl' pt={10}>
+              Menu
+            </Heading>
+            <Box pt={4}>
+              {items.map((item, i) => {
+                return (
+                  <Box key={`drawer-item-${i}`}>
+                    {i !== 0 ? <Divider /> : null}
+                    <Box py={1}>
+                      <Link href={`${item.href}`}>
+                        <Text
+                          fontSize='sm'
+                          color='gray.500'
+                          py={1}
+                          onClick={onClose}>
+                          {item.text}
+                        </Text>
+                      </Link>
+                    </Box>
                   </Box>
-                </Box>
-              )
-            })}
+                )
+              })}
+            </Box>
           </DrawerBody>
         </DrawerContent>
       </ChakraDrawer>
