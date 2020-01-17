@@ -1,8 +1,10 @@
 import React from 'react'
 
-import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/core'
+import { Box, Button, Flex, Image, Text, useTheme } from '@chakra-ui/core'
 
 const Hero: React.FC = props => {
+  const theme = useTheme()
+
   return (
     <Flex
       justifyContent='center'
@@ -14,10 +16,17 @@ const Hero: React.FC = props => {
         <Flex justifyContent='center'>
           <Image src='/static/images/ycclogo.png' size='2xs' />
         </Flex>
-        <Heading pt={2} textAlign='center' size='xl'>
+        <Text
+          as='h2'
+          pt={2}
+          textAlign='center'
+          fontWeight='bold'
+          lineHeight='shorter'
+          fontFamily={theme.fonts.heading}
+          fontSize={['2xl', '2xl', '3xl']}>
           [ Young Creator's Camp ]
-        </Heading>
-        <Text py={4} textAlign='center' fontSize='xl'>
+        </Text>
+        <Text py={4} textAlign='center' fontSize={['md', 'md', 'lg']}>
           วันที่ 20 - 23 มีนาคม 2563
         </Text>
         <Flex justifyContent='center'>
