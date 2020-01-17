@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Button, Flex, Image, Text, useTheme } from '@chakra-ui/core'
+import { Box, Button, Flex, Image, Link, Text, useTheme } from '@chakra-ui/core'
 
 const Hero: React.FC = props => {
   const theme = useTheme()
@@ -30,9 +30,11 @@ const Hero: React.FC = props => {
           วันที่ 20 - 23 มีนาคม 2563
         </Text>
         <Flex justifyContent='center'>
-          <Button px={24} borderRadius='999px'>
-            สมัครเลย!
-          </Button>
+          <Link href='#join'>
+            <Button px={24} borderRadius='999px'>
+              สมัครเลย!
+            </Button>
+          </Link>
         </Flex>
       </Box>
     </Flex>
