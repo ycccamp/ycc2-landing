@@ -11,6 +11,7 @@ const NavLink: React.FC<INavbarLinkProps> = props => {
     <PseudoBox
       display='flex'
       px={3}
+      py={4}
       height={'100%'}
       justifyContent='center'
       alignItems='center'

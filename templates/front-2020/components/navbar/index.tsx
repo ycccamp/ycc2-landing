@@ -35,7 +35,6 @@ const Navbar: React.FC = props => {
   return (
     <Box
       as='nav'
-      height={{ base: '48px' }}
       boxShadow='0px 1px 5px 0px rgba(0, 0, 0, 0.2)'
       position='fixed'
       zIndex={80}
