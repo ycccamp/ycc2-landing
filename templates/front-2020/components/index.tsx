@@ -24,7 +24,7 @@ const FrontComponent: React.FC = props => {
     fonts: {
       ...theme.fonts,
       heading: `'Poppins', 'Kanit', Futura, -apple-system, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif`,
-      body: `'Noto Sans Thai UI', -apple-system, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif`,
+      body: `'Prompt', -apple-system, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif`,
     },
   }
 
@@ -32,7 +32,7 @@ const FrontComponent: React.FC = props => {
     <React.Fragment>
       <Head>
         <link
-          href='https://fonts.googleapis.com/css?family=Kanit|Poppins:700&display=swap'
+          href='https://fonts.googleapis.com/css?family=Kanit|Poppins:700|Prompt&display=swap'
           rel='stylesheet'
         />
       </Head>
