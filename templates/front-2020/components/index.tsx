@@ -2,8 +2,10 @@ import React from 'react'
 
 import Head from 'next/head'
 
-import { DefaultTheme, theme, ThemeProvider } from '@chakra-ui/core'
+import { ThemeProvider } from '@chakra-ui/core'
 import { css, Global } from '@emotion/core'
+
+import { theme } from '../theme'
 
 import { Navbar } from './navbar'
 import {
@@ -19,15 +21,6 @@ import {
 } from './section'
 
 const FrontComponent: React.FC = props => {
-  const customTheme: DefaultTheme = {
-    ...theme,
-    fonts: {
-      ...theme.fonts,
-      heading: `'Poppins', 'Kanit', Futura, -apple-system, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif`,
-      body: `'Prompt', -apple-system, 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif`,
-    },
-  }
-
   return (
     <React.Fragment>
       <Head>
@@ -36,7 +29,7 @@ const FrontComponent: React.FC = props => {
           rel='stylesheet'
         />
       </Head>
-      <ThemeProvider theme={customTheme}>
+      <ThemeProvider theme={theme}>
         <Global
           styles={css`
             html {

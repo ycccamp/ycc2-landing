@@ -12,6 +12,7 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "babel-plugin-emotion": "^10.0.27",
+    "color": "^3.1.2",
     "emotion-theming": "^10.0.27",
     "next": "^9.1.7",
     "react": "^16.12.0",
@@ -28,6 +29,7 @@
     "test:lint": "tslint 'src/**/*.{ts,tsx}'"
   },
   "devDependencies": {
+    "@types/color": "^3.0.1",
     "@types/node": "^13.1.6",
     "@types/react-icons": "^3.0.0",
     "firebase-tools": "^7.11.0",
