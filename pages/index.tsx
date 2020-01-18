@@ -10,7 +10,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <React.Fragment>
-      {mode === 0 ? <ComingSoon /> : mode === 1 ? <Front2020 /> : null}
+      {mode === 1 ? <Front2020 /> : <ComingSoon />}
     </React.Fragment>
   )
 }
