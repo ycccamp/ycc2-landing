@@ -26,7 +26,7 @@ export const Contact: React.FC = props => {
               <Flex
                 alignItems='center'
                 justifyContent='center'
-                bg='blue.500'
+                bg='facebook.500'
                 height='300px'
                 borderRadius={8}>
                 <Box as={FaFacebookF} size='64px' color='white' />
@@ -38,7 +38,7 @@ export const Contact: React.FC = props => {
               <Flex
                 alignItems='center'
                 justifyContent='center'
-                bg='blue.300'
+                bg='twitter.500'
                 height='300px'
                 borderRadius={8}>
                 <Box as={FaTwitter} size='64px' color='white' />
