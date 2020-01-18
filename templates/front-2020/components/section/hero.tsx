@@ -32,8 +32,8 @@ export const Hero: React.FC = props => {
           วันที่ 20 - 23 มีนาคม 2563
         </Text>
         <Flex justifyContent='center'>
-          <Link href='#join'>
-            <Button px={24} borderRadius='999px'>
+          <Link href='#join' _hover={{ textDecoration: 'none' }}>
+            <Button px={24} borderRadius='999px' variantColor='flory'>
               สมัครเลย!
             </Button>
           </Link>
