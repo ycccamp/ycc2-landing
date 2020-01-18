@@ -54,7 +54,9 @@ const Drawer: React.FC<IDrawerProps> = props => {
                   <Box key={`drawer-item-${i}`}>
                     {i !== 0 ? <Divider /> : null}
                     <Box py={1}>
-                      <Link href={`${item.href}`}>
+                      <Link
+                        href={`${item.href}`}
+                        _hover={{ textDecoration: 'none' }}>
                         <Text
                           fontSize='sm'
                           color='gray.500'
