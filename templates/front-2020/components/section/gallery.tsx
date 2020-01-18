@@ -12,55 +12,53 @@ export const Gallery: React.FC = props => {
       minHeight='100%'
       id='gallery'>
       <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
-        <Heading textAlign='center' size='2xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={10}>
           ภาพกิจกรรม
         </Heading>
-        <Box pt={6}>
-          <Flex justifyContent='center'>
-            <Box width={['100%', 14 / 24]} p={2}>
-              <AspectRatioBox ratio={16 / 9}>
-                <Image
-                  src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
-                  objectFit='cover'
-                />
-              </AspectRatioBox>
-            </Box>
-          </Flex>
-          <Flex justifyContent='center' flexWrap='wrap'>
-            <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
-              <AspectRatioBox ratio={16 / 9}>
-                <Image
-                  src='https://storage.rayriffy.com/files/image/38947047_p0.png'
-                  objectFit='cover'
-                />
-              </AspectRatioBox>
-            </Box>
-            <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
-              <AspectRatioBox ratio={16 / 9}>
-                <Image
-                  src='https://storage.rayriffy.com/files/image/55204389_p0.png'
-                  objectFit='cover'
-                />
-              </AspectRatioBox>
-            </Box>
-            <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
-              <AspectRatioBox ratio={16 / 9}>
-                <Image
-                  src='https://storage.rayriffy.com/files/image/75522689_p0.png'
-                  objectFit='cover'
-                />
-              </AspectRatioBox>
-            </Box>
-            <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
-              <AspectRatioBox ratio={16 / 9}>
-                <Image
-                  src='https://storage.rayriffy.com/files/image/10769220_p0.jpg'
-                  objectFit='cover'
-                />
-              </AspectRatioBox>
-            </Box>
-          </Flex>
-        </Box>
+        <Flex justifyContent='center'>
+          <Box width={['100%', 14 / 24]} p={2}>
+            <AspectRatioBox ratio={16 / 9}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+          </Box>
+        </Flex>
+        <Flex justifyContent='center' flexWrap='wrap'>
+          <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
+            <AspectRatioBox ratio={16 / 9}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/38947047_p0.png'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+          </Box>
+          <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
+            <AspectRatioBox ratio={16 / 9}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/55204389_p0.png'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+          </Box>
+          <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
+            <AspectRatioBox ratio={16 / 9}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/75522689_p0.png'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+          </Box>
+          <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
+            <AspectRatioBox ratio={16 / 9}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/10769220_p0.jpg'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+          </Box>
+        </Flex>
       </Box>
     </Flex>
   )

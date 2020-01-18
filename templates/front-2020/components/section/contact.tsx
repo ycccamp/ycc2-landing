@@ -13,14 +13,10 @@ export const Contact: React.FC = props => {
       py={20}
       id='contact'>
       <Box width={[22 / 24, 18 / 24, 14 / 24, 12 / 24]}>
-        <Heading textAlign='center' size='2xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={10}>
           Contact Us
         </Heading>
-        <Flex
-          alignItems='center'
-          justifyContent='center'
-          flexWrap='wrap'
-          pt={6}>
+        <Flex alignItems='center' justifyContent='center' flexWrap='wrap'>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 3]} p={6}>
             <Link href='https://facebook.com/ycccampth' isExternal>
               <Flex

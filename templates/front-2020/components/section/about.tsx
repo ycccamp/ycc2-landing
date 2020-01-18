@@ -12,10 +12,10 @@ export const About: React.FC = props => {
       bg='gray.200'
       id='about'>
       <Box width={[22 / 24, 18 / 24, 14 / 24, 10 / 24]}>
-        <Heading textAlign='center' size='2xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={10}>
           What is YCC
         </Heading>
-        <Text py={6}>
+        <Text>
           ค่ายนักสร้างรุ่นเยาว์ ปีที่สอง หรือ Young Creator's Camp 2 เป็นค่าย
           Product Bootcamp ที่จะพาน้องๆ นักเรียนมัธยมปลาย
           ที่สนใจในการเขียนโปรแกรม ออกแบบกราฟิก และสร้างคอนเทนต์

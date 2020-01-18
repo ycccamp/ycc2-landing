@@ -11,10 +11,10 @@ export const FAQ: React.FC = props => {
       py={20}
       id='faq'>
       <Box width={[22 / 24, 18 / 24, 14 / 24, 10 / 24]}>
-        <Heading textAlign='center' size='2xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={10}>
           คำถามที่พบบ่อย
         </Heading>
-        <Text py={6}>WAIT FOR DESIGN</Text>
+        <Text>WAIT FOR DESIGN</Text>
       </Box>
     </Flex>
   )

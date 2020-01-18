@@ -12,10 +12,10 @@ export const Schedule: React.FC = props => {
       bg='gray.200'
       id='schedule'>
       <Box width={[22 / 24, 18 / 24]}>
-        <Heading textAlign='center' size='2xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={10}>
           ระยะเวลา
         </Heading>
-        <Flex flexWrap='wrap' alignItems='center' pt={6}>
+        <Flex flexWrap='wrap' alignItems='center'>
           <Box width={[1 / 2, 1 / 2, 1 / 4]} p={4}>
             <Text textAlign='center' fontSize='lg'>
               รับสมัคร

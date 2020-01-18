@@ -26,10 +26,10 @@ export const Join: React.FC = props => {
       py={20}
       id='join'>
       <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
-        <Heading textAlign='center' size='2xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={10}>
           เลือกสาขา
         </Heading>
-        <Flex pt={6} flexWrap='wrap'>
+        <Flex flexWrap='wrap'>
           {tracks.map(track => (
             <Box
               p={4}
