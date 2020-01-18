@@ -1,5 +1,4 @@
 import App from 'next/app'
-import Head from 'next/head'
 import React from 'react'
 
 import { CSSReset, DefaultTheme, theme, ThemeProvider } from '@chakra-ui/core'
@@ -20,10 +19,6 @@ class NextApp extends App {
 
     return (
       <React.Fragment>
-        <Head>
-          <link rel='shortcut icon' href='/static/favicon.ico' />
-          <link rel='apple-touch-icon-precomposed' href='/static/favicon.ico' />
-        </Head>
         <ThemeProvider theme={customTheme}>
           <CSSReset />
           <AppShell>

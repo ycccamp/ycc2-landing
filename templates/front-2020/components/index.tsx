@@ -28,6 +28,11 @@ const FrontComponent: React.FC = props => {
           href='https://fonts.googleapis.com/css?family=Kanit|Poppins:700|Prompt&display=swap'
           rel='stylesheet'
         />
+        <link rel='shortcut icon' href='/static/favicon-2020.ico' />
+        <link
+          rel='apple-touch-icon-precomposed'
+          href='/static/favicon-2020.ico'
+        />
       </Head>
       <ThemeProvider theme={theme}>
         <Global

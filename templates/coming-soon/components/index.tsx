@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Head from 'next/head'
+
 import { Box, Flex, Image, Text } from '@chakra-ui/core'
 
 import Fonts from './fonts'
@@ -8,6 +10,10 @@ const ComingSoonComponent: React.FC = props => {
   return (
     <React.Fragment>
       <Fonts />
+      <Head>
+        <link rel='shortcut icon' href='/static/favicon.ico' />
+        <link rel='apple-touch-icon-precomposed' href='/static/favicon.ico' />
+      </Head>
       <Flex
         height='100%'
         justifyContent='center'
