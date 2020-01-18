@@ -5,11 +5,17 @@ import { Box, Button, Flex, Image, Link, Text, useTheme } from '@chakra-ui/core'
 export const Hero: React.FC = props => {
   const theme = useTheme()
 
+  const size = 10
+  const space = 150
+
   return (
     <Flex
       justifyContent='center'
       alignItems='center'
       minHeight='100%'
+      backgroundImage={`radial-gradient(rgba(64, 147, 164, 0.5) ${size}px, transparent ${size}px), radial-gradient(rgba(232, 100, 119, 0.5) ${size}px, transparent ${size}px)`}
+      backgroundSize={`${space * 2}px ${space * 2}px`}
+      backgroundPosition={`0 0, ${space}px ${space}px`}
       py={20}
       id='hero'>
       <Box px={4}>
