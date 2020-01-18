@@ -2,17 +2,17 @@ import React from 'react'
 
 import { AspectRatioBox, Box, Flex, Heading, Image } from '@chakra-ui/core'
 
-const Gallery: React.FC = props => {
+export const Gallery: React.FC = props => {
   return (
     <Flex
       justifyContent='center'
       alignItems='center'
-      py={12}
+      py={20}
       bg='gray.200'
       minHeight='100%'
       id='gallery'>
       <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
-        <Heading textAlign='center' size='xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={4}>
           ภาพกิจกรรม
         </Heading>
         <Box pt={6}>
@@ -65,5 +65,3 @@ const Gallery: React.FC = props => {
     </Flex>
   )
 }
-
-export default Gallery

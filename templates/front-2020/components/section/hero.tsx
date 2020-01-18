@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Button, Flex, Image, Link, Text, useTheme } from '@chakra-ui/core'
 
-const Hero: React.FC = props => {
+export const Hero: React.FC = props => {
   const theme = useTheme()
 
   return (
@@ -10,11 +10,11 @@ const Hero: React.FC = props => {
       justifyContent='center'
       alignItems='center'
       minHeight='100%'
-      py={12}
+      py={20}
       id='hero'>
       <Box px={4}>
-        <Flex justifyContent='center'>
-          <Box width={5 / 10}>
+        <Flex justifyContent='center' pb={4}>
+          <Box maxWidth='400px' width={1 / 2}>
             <Image src='/static/images/ycclogo-2020.png' />
           </Box>
         </Flex>
@@ -42,5 +42,3 @@ const Hero: React.FC = props => {
     </Flex>
   )
 }
-
-export default Hero

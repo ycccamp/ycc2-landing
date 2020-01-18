@@ -2,17 +2,17 @@ import React from 'react'
 
 import { AspectRatioBox, Box, Flex, Heading, Image } from '@chakra-ui/core'
 
-const Sponsor: React.FC = props => {
+export const Sponsor: React.FC = props => {
   return (
     <Flex
       justifyContent='center'
       alignItems='center'
       minHeight='100%'
-      py={12}
+      py={20}
       bg='gray.200'
       id='sponsor'>
       <Box width={[22 / 24, 19 / 24, 17 / 24, 12 / 24]}>
-        <Heading textAlign='center' size='xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={4}>
           ผู้สนับสนุน
         </Heading>
         <Flex
@@ -39,5 +39,3 @@ const Sponsor: React.FC = props => {
     </Flex>
   )
 }
-
-export default Sponsor

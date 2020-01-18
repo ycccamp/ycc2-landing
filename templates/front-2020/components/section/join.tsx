@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Button, Flex, Heading } from '@chakra-ui/core'
 
-const Join: React.FC = props => {
+export const Join: React.FC = props => {
   const tracks = [
     {
       key: 'programming',
@@ -23,10 +23,10 @@ const Join: React.FC = props => {
       justifyContent='center'
       alignItems='center'
       minHeight='100%'
-      py={12}
+      py={20}
       id='join'>
       <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
-        <Heading textAlign='center' size='xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={4}>
           เลือกสาขา
         </Heading>
         <Flex pt={6} flexWrap='wrap'>
@@ -43,5 +43,3 @@ const Join: React.FC = props => {
     </Flex>
   )
 }
-
-export default Join

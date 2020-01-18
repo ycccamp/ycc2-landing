@@ -5,7 +5,7 @@ import { Box, Flex, Stack } from '@chakra-ui/core'
 import Drawer from './drawer'
 import NavLink from './link'
 
-const Navbar: React.FC = props => {
+export const Navbar: React.FC = props => {
   const nav = [
     {
       text: 'รู้จักค่าย',
@@ -63,5 +63,3 @@ const Navbar: React.FC = props => {
     </Box>
   )
 }
-
-export default Navbar

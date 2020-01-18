@@ -2,16 +2,16 @@ import React from 'react'
 
 import { AspectRatioBox, Box, Flex, Heading } from '@chakra-ui/core'
 
-const Venue: React.FC = props => {
+export const Venue: React.FC = props => {
   return (
     <Flex
       justifyContent='center'
       alignItems='center'
       minHeight='100%'
-      py={12}
+      py={20}
       id='venue'>
       <Box width={[22 / 24, 20 / 24, 18 / 24, 12 / 24]}>
-        <Heading textAlign='center' size='xl' pb={4}>
+        <Heading textAlign='center' size='2xl' pb={4}>
           สถานที่
         </Heading>
         <Box pt={6}>
@@ -29,5 +29,3 @@ const Venue: React.FC = props => {
     </Flex>
   )
 }
-
-export default Venue
