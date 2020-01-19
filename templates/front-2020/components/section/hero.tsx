@@ -14,14 +14,13 @@ export const Hero: React.FC = props => {
       backgroundImage='linear-gradient(180deg, rgba(244, 215, 242, 0.8) 0%, transparent 80%)'
       id='hero'>
       <Box px={4}>
-        <Flex justifyContent='center' pb={4}>
+        <Flex justifyContent='center' pb={10}>
           <Box maxWidth='400px' width={1 / 2}>
             <Image src='/static/images/ycclogo-2020.png' />
           </Box>
         </Flex>
         <Text
           as='h2'
-          pt={6}
           color='topaz.500'
           textAlign='center'
           fontWeight='bold'
@@ -30,7 +29,12 @@ export const Hero: React.FC = props => {
           fontSize={['2xl', '2xl', '3xl', '5xl']}>
           Young Creator's Camp 2
         </Text>
-        <Text py={4} textAlign='center' fontSize={['md', 'md', 'lg']}>
+        <Text
+          py={4}
+          textAlign='center'
+          fontWeight='bold'
+          color='topaz.500'
+          fontSize={['md', 'md', 'lg', '2xl']}>
           วันที่ 20 - 23 มีนาคม 2563
         </Text>
         <Flex justifyContent='center'>
