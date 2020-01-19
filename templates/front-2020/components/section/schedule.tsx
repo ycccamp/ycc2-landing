@@ -1,6 +1,13 @@
 import React from 'react'
 
-import { Box, Flex, Heading, Text } from '@chakra-ui/core'
+import {
+  AspectRatioBox,
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+} from '@chakra-ui/core'
 
 export const Schedule: React.FC = props => {
   return (
@@ -15,23 +22,51 @@ export const Schedule: React.FC = props => {
           ระยะเวลา
         </Heading>
         <Flex flexWrap='wrap' alignItems='center'>
-          <Box width={[1 / 2, 1 / 2, 1 / 4]} p={4}>
-            <Text textAlign='center' fontSize='lg'>
+          <Box width={[1 / 2, 1 / 2, 1 / 4]} p={[8, 8, 12]}>
+            <AspectRatioBox ratio={1 / 1}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                rounded='full'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+            <Text textAlign='center' fontSize={['lg', 'lg', 'xl']} pt={4}>
               รับสมัคร
             </Text>
           </Box>
-          <Box width={[1 / 2, 1 / 2, 1 / 4]} p={4}>
-            <Text textAlign='center' fontSize='lg'>
+          <Box width={[1 / 2, 1 / 2, 1 / 4]} p={[8, 8, 12]}>
+            <AspectRatioBox ratio={1 / 1}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                rounded='full'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+            <Text textAlign='center' fontSize={['lg', 'lg', 'xl']} pt={4}>
               ประกาศผล
             </Text>
           </Box>
-          <Box width={[1 / 2, 1 / 2, 1 / 4]} p={4}>
-            <Text textAlign='center' fontSize='lg'>
+          <Box width={[1 / 2, 1 / 2, 1 / 4]} p={[8, 8, 12]}>
+            <AspectRatioBox ratio={1 / 1}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                rounded='full'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+            <Text textAlign='center' fontSize={['lg', 'lg', 'xl']} pt={4}>
               ยืนยันสิทธิ์
             </Text>
           </Box>
-          <Box width={[1 / 2, 1 / 2, 1 / 4]} p={4}>
-            <Text textAlign='center' fontSize='lg'>
+          <Box width={[1 / 2, 1 / 2, 1 / 4]} p={[8, 8, 12]}>
+            <AspectRatioBox ratio={1 / 1}>
+              <Image
+                src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                rounded='full'
+                objectFit='cover'
+              />
+            </AspectRatioBox>
+            <Text textAlign='center' fontSize={['lg', 'lg', 'xl']} pt={4}>
               วันค่าย
             </Text>
           </Box>
