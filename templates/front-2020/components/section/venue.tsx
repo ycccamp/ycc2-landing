@@ -14,7 +14,11 @@ export const Venue: React.FC = props => {
         <Heading textAlign='center' size='2xl' pb={10}>
           สถานที่
         </Heading>
-        <AspectRatioBox ratio={16 / 9}>
+        <AspectRatioBox
+          ratio={16 / 9}
+          borderRadius={20}
+          overflow='hidden'
+          boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.25)'>
           <Box>
             <iframe
               width='100%'
