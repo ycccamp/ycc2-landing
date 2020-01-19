@@ -9,7 +9,6 @@ export const Sponsor: React.FC = props => {
       alignItems='center'
       minHeight='100%'
       py={20}
-      bg='gray.200'
       id='sponsor'>
       <Box width={[22 / 24, 19 / 24, 17 / 24, 12 / 24]}>
         <Heading textAlign='center' size='2xl' pb={10}>

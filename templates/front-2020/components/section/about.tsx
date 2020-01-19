@@ -9,7 +9,6 @@ export const About: React.FC = props => {
       alignItems='center'
       minHeight='100%'
       py={20}
-      bg='gray.200'
       id='about'>
       <Box width={[22 / 24, 18 / 24, 14 / 24, 10 / 24]}>
         <Heading textAlign='center' size='2xl' pb={10}>

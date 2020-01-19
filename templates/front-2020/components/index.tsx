@@ -2,7 +2,7 @@ import React from 'react'
 
 import Head from 'next/head'
 
-import { ThemeProvider } from '@chakra-ui/core'
+import { CSSReset, ThemeProvider } from '@chakra-ui/core'
 import { css, Global } from '@emotion/core'
 
 import { theme } from '../theme'
@@ -21,6 +21,8 @@ import {
 } from './section'
 
 const FrontComponent: React.FC = props => {
+  const size = 50
+
   return (
     <React.Fragment>
       <Head>
@@ -35,10 +37,26 @@ const FrontComponent: React.FC = props => {
         />
       </Head>
       <ThemeProvider theme={theme}>
+        <CSSReset />
         <Global
           styles={css`
             html {
               scroll-behavior: smooth;
+            }
+
+            body {
+              background-color: white;
+              background-image: linear-gradient(
+                  rgba(204, 202, 206, 1) 1px,
+                  transparent 1px
+                ),
+                linear-gradient(
+                  90deg,
+                  rgba(204, 202, 206, 1) 1px,
+                  transparent 1px
+                );
+              background-size: ${size}px ${size}px, ${size}px ${size}px;
+              backgroundposition: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
             }
           `}
         />

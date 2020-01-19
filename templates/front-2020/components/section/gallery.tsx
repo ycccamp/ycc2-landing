@@ -8,7 +8,6 @@ export const Gallery: React.FC = props => {
       justifyContent='center'
       alignItems='center'
       py={20}
-      bg='gray.200'
       minHeight='100%'
       id='gallery'>
       <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
