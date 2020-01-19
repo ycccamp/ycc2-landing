@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Flex, Heading, Text } from '@chakra-ui/core'
+import { Box, Divider, Flex, Heading, Text } from '@chakra-ui/core'
 
 export const About: React.FC = props => {
   return (
@@ -10,11 +10,17 @@ export const About: React.FC = props => {
       minHeight='100%'
       py={20}
       id='about'>
-      <Box width={[22 / 24, 18 / 24, 14 / 24, 10 / 24]}>
-        <Heading textAlign='center' size='2xl' pb={10}>
+      <Box
+        width={[22 / 24, 18 / 24, 14 / 24, 10 / 24]}
+        bg='white'
+        p={10}
+        borderRadius={20}
+        boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.25)'>
+        <Heading textAlign='center' size='2xl' pb={5}>
           What is YCC
         </Heading>
-        <Text>
+        <Divider />
+        <Text pt={5}>
           ค่ายนักสร้างรุ่นเยาว์ ปีที่สอง หรือ Young Creator's Camp 2 เป็นค่าย
           Product Bootcamp ที่จะพาน้องๆ นักเรียนมัธยมปลาย
           ที่สนใจในการเขียนโปรแกรม ออกแบบกราฟิก และสร้างคอนเทนต์
