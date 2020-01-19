@@ -21,6 +21,9 @@ import {
 } from './section'
 
 const FrontComponent: React.FC = props => {
+  const size = 10
+  const space = 150
+
   return (
     <React.Fragment>
       <Head>
@@ -40,6 +43,20 @@ const FrontComponent: React.FC = props => {
           styles={css`
             html {
               scroll-behavior: smooth;
+            }
+
+            body {
+              background-image: radial-gradient(
+                  rgba(64, 147, 164, 0.5) ${size}px,
+                  transparent ${size}px
+                ),
+                radial-gradient(
+                  rgba(232, 100, 119, 0.5) ${size}px,
+                  transparent ${size}px
+                );
+              background-size: ${space * 2}px ${space * 2}px;
+              background-position: 0 0, ${space}px ${space}px;
+              animation: lineMove 2s infinite linear;
             }
           `}
         />
