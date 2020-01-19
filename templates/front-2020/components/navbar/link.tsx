@@ -22,7 +22,7 @@ const NavLink: React.FC<INavbarLinkProps> = props => {
         bg: 'gray.50',
       }}
       {...props}>
-      <Text fontWeight='medium' userSelect='none'>
+      <Text userSelect='none' fontSize='md'>
         {text}
       </Text>
     </PseudoBox>
