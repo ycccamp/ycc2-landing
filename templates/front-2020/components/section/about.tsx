@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Box, Divider, Flex, Heading, Text } from '@chakra-ui/core'
+import { theme } from '../../theme'
 
 export const About: React.FC = props => {
   return (
@@ -15,7 +16,7 @@ export const About: React.FC = props => {
         bg='white'
         p={10}
         borderRadius={20}
-        boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.25)'>
+        boxShadow={theme.shadow['2xl']}>
         <Heading textAlign='center' size='2xl' pb={5}>
           What is YCC
         </Heading>

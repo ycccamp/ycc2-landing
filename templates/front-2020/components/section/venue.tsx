@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { AspectRatioBox, Box, Flex, Heading } from '@chakra-ui/core'
+import { theme } from '../../theme'
 
 export const Venue: React.FC = props => {
   return (
@@ -18,7 +19,7 @@ export const Venue: React.FC = props => {
           ratio={16 / 9}
           borderRadius={20}
           overflow='hidden'
-          boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.25)'>
+          boxShadow={theme.shadow['2xl']}>
           <Box>
             <iframe
               width='100%'
