@@ -1,6 +1,14 @@
 import React from 'react'
 
-import { Box, Button, Flex, Heading } from '@chakra-ui/core'
+import {
+  AspectRatioBox,
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  PseudoBox,
+} from '@chakra-ui/core'
 
 export const Join: React.FC = props => {
   const tracks = [
@@ -35,7 +43,35 @@ export const Join: React.FC = props => {
               p={4}
               key={`join-${track.key}`}
               width={['100%', 1 / 2, 1 / 2, 1 / 3]}>
-              <Button width='100%'>{track.name}</Button>
+              <PseudoBox
+                bg='white'
+                p={8}
+                borderRadius={20}
+                transition='200ms'
+                transition-timing-function='ease-out'
+                transform='perspective(100px) translateZ(0px)'
+                boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                _hover={{
+                  transform: 'perspective(100px) translateZ(10px)',
+                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                }}>
+                <Link
+                  href='https://regis.ycc.in.th'
+                  isExternal
+                  _hover={{ textDecoration: 'none' }}>
+                  <Heading size='md' textAlign='center'>
+                    {track.name}
+                  </Heading>
+                  <Box pt={8}>
+                    <AspectRatioBox ratio={3 / 4}>
+                      <Image
+                        src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                        objectFit='cover'
+                      />
+                    </AspectRatioBox>
+                  </Box>
+                </Link>
+              </PseudoBox>
             </Box>
           ))}
         </Flex>
