@@ -26,7 +26,11 @@ export const Gallery: React.FC = props => {
                 theme.shadows.xl,
                 theme.shadows['2xl'],
               ]}>
-              <Image src='/static/images/ycc-2020-1.jpg' objectFit='cover' />
+              <Image
+                src='/static/images/ycc-2020-1.jpg'
+                alt='Gallery Image 1'
+                objectFit='cover'
+              />
             </AspectRatioBox>
           </Box>
         </Flex>
@@ -37,7 +41,11 @@ export const Gallery: React.FC = props => {
               borderRadius={20}
               overflow='hidden'
               boxShadow={theme.shadows.xl}>
-              <Image src='/static/images/ycc-2020-2.jpg' objectFit='cover' />
+              <Image
+                src='/static/images/ycc-2020-2.jpg'
+                alt='Gallery Image 2'
+                objectFit='cover'
+              />
             </AspectRatioBox>
           </Box>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
@@ -46,7 +54,11 @@ export const Gallery: React.FC = props => {
               borderRadius={20}
               overflow='hidden'
               boxShadow={theme.shadows.xl}>
-              <Image src='/static/images/ycc-2020-3.jpg' objectFit='cover' />
+              <Image
+                src='/static/images/ycc-2020-3.jpg'
+                alt='Gallery Image 3'
+                objectFit='cover'
+              />
             </AspectRatioBox>
           </Box>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
@@ -55,7 +67,11 @@ export const Gallery: React.FC = props => {
               borderRadius={20}
               overflow='hidden'
               boxShadow={theme.shadows.xl}>
-              <Image src='/static/images/ycc-2020-4.jpg' objectFit='cover' />
+              <Image
+                src='/static/images/ycc-2020-4.jpg'
+                alt='Gallery Image 4'
+                objectFit='cover'
+              />
             </AspectRatioBox>
           </Box>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
@@ -64,7 +80,11 @@ export const Gallery: React.FC = props => {
               borderRadius={20}
               overflow='hidden'
               boxShadow={theme.shadows.xl}>
-              <Image src='/static/images/ycc-2020-5.jpg' objectFit='cover' />
+              <Image
+                src='/static/images/ycc-2020-5.jpg'
+                alt='Gallery Image 5'
+                objectFit='cover'
+              />
             </AspectRatioBox>
           </Box>
         </Flex>

@@ -78,6 +78,7 @@ export const Join: React.FC = props => {
                     <Image
                       src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
                       objectFit='cover'
+                      alt={`Character ${track.name}`}
                     />
                   </AspectRatioBox>
                 </Box>

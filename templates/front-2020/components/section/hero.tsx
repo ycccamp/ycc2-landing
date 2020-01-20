@@ -18,7 +18,7 @@ export const Hero: React.FC = props => {
       <Box px={4}>
         <Flex justifyContent='center' pb={10}>
           <Box maxWidth='400px' width={1 / 2}>
-            <Image src='/static/images/ycclogo-2020.png' />
+            <Image src='/static/images/ycclogo-2020.png' alt='YCC Logo' />
           </Box>
         </Flex>
         <Text

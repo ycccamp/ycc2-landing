@@ -69,6 +69,7 @@ export const Schedule: React.FC = props => {
                   <AspectRatioBox ratio={1 / 1}>
                     <Image
                       src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                      alt={item.key}
                       rounded='full'
                       objectFit='cover'
                       css={css`

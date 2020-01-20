@@ -17,12 +17,15 @@ export const Sponsor: React.FC = props => {
         <Flex alignItems='center' justifyContent='center' flexWrap='wrap'>
           <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
             <AspectRatioBox ratio={1 / 1} background='white'>
-              <Image src='/static/images/ycc-2020-sponsor-rise.svg' />
+              <Image
+                src='/static/images/ycc-2020-sponsor-rise.svg'
+                alt='RISE'
+              />
             </AspectRatioBox>
           </Box>
           <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
             <AspectRatioBox ratio={1 / 1}>
-              <Image src='/static/images/ycc-2020-sponsor-svl.svg' />
+              <Image src='/static/images/ycc-2020-sponsor-svl.svg' alt='SVL' />
             </AspectRatioBox>
           </Box>
         </Flex>
