@@ -17,7 +17,7 @@ export const About: React.FC = props => {
         p={10}
         borderRadius={20}
         boxShadow={theme.shadow['2xl']}>
-        <Heading textAlign='center' size='2xl' pb={10}>
+        <Heading textAlign='center' size='2xl' pb={5}>
           What is YCC
         </Heading>
         <Divider />
