@@ -44,7 +44,7 @@ export const Hero: React.FC = props => {
             size='lg'
             variantColor='flory'
             isDisabled={true}>
-            <Text>เปิดรับสมัครวันที่ 28</Text>
+            <Text>เปิดรับสมัครวันที่ 28 มกราคม</Text>
           </Button>
         </Flex>
       </Box>
