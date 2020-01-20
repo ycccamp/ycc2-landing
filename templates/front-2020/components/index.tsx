@@ -12,6 +12,7 @@ import {
   About,
   Contact,
   FAQ,
+  Footer,
   Gallery,
   Hero,
   Join,
@@ -70,6 +71,7 @@ const FrontComponent: React.FC = props => {
         <FAQ />
         <Sponsor />
         <Contact />
+        <Footer />
       </ThemeProvider>
     </React.Fragment>
   )
