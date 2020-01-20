@@ -2,14 +2,9 @@ import React from 'react'
 
 import { Box, Flex, Heading, Text, theme } from '@chakra-ui/core'
 
-export const FAQ: React.FC = props => {
-  const questions = [
-    {
-      q: 'H ที่ดีต้อง...',
-      a: 'h.rayriffy',
-    },
-  ]
+import { faq } from '../../constants/faq'
 
+export const FAQ: React.FC = props => {
   return (
     <Flex
       justifyContent='center'
@@ -22,15 +17,18 @@ export const FAQ: React.FC = props => {
           คำถามที่พบบ่อย
         </Heading>
         <Flex alignItems='center' flexWrap='wrap'>
-          {questions.map((question, i) => {
+          {faq.map((question, i) => {
             return (
-              <Box key={`question-${i}`} width={['100%', 1 / 2, 1 / 3]}>
+              <Box
+                key={`question-${i}`}
+                width={['100%', '100%', 1 / 2, 1 / 3]}
+                p={4}>
                 <Box
                   background='white'
                   p={6}
                   boxShadow={theme.shadows['2xl']}
                   borderRadius={20}>
-                  <Heading size='md' pb={1}>
+                  <Heading size='md' pb={2}>
                     {question.q}
                   </Heading>
                   <Text>{question.a}</Text>

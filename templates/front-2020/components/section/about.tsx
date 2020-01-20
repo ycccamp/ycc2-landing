@@ -17,23 +17,23 @@ export const About: React.FC = props => {
         p={10}
         borderRadius={20}
         boxShadow={theme.shadow['2xl']}>
-        <Heading textAlign='center' size='2xl' pb={5}>
+        <Heading textAlign='center' size='2xl' pb={10}>
           What is YCC
         </Heading>
         <Divider />
         <Text pt={5}>
-          ค่ายนักสร้างรุ่นเยาว์ ปีที่สอง หรือ Young Creator's Camp 2 เป็นค่าย
-          Product Bootcamp ที่จะพาน้องๆ นักเรียนมัธยมปลาย
-          ที่สนใจในการเขียนโปรแกรม ออกแบบกราฟิก และสร้างคอนเทนต์
-          มาร่วมมือกันสร้างโปรดักต์ เพื่อแก้ไขปัญหาที่เกิดขึ้นในสังคม ภายในเวลา
-          4 วัน
+          Young Creator's Camp คือค่ายสำหรับเยาวชนผู้เห็นปัญหาของสังคม
+          เริ่มที่จะตั้งคำถามกับมัน และพยายามแก้ไขด้วยความสามารถของตัวเอง
+        </Text>
+        <Text py={2}>
+          ช่วงเวลาแห่งการเรียนรู้ ฝึกฝน และทำความเข้าใจในแก่นของ Programming ,
+          Design และ Creative
+          รวมทั้งขัดเกลาความสามารถให้ไปไกลมากกว่าด้วยการทำงานจริงและเทคนิคจากผู้เชี่ยวชาญในวงการ
         </Text>
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec
-          feugiat nisl pretium fusce id. Sit amet aliquam id diam maecenas
-          ultricies. Cursus sit amet dictum sit amet justo. Mi eget mauris
-          pharetra et ultrices neque.
+          ถ้าอยากรู้ว่าคุณจะไปได้ไกลแค่ไหน
+          และพลังของคุณจะเปลี่ยนแปลงสังคมได้มากเพียงใด ค่าย YCC
+          อาจจะเป็นคำตอบที่คุณเองรอคอย
         </Text>
       </Box>
     </Flex>
