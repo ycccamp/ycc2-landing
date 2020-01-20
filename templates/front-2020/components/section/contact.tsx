@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 
-import { Box, Flex, Heading, Link, Text } from '@chakra-ui/core'
+import { AspectRatioBox, Box, Flex, Heading, Link, Text } from '@chakra-ui/core'
 
 export const Contact: React.FC = props => {
   return (
@@ -19,38 +19,29 @@ export const Contact: React.FC = props => {
         <Flex alignItems='center' justifyContent='center' flexWrap='wrap'>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 3]} p={6}>
             <Link href='https://facebook.com/ycccampth' isExternal>
-              <Flex
-                alignItems='center'
-                justifyContent='center'
-                bg='facebook.500'
-                height='300px'
-                borderRadius={8}>
-                <Box as={FaFacebookF} size='64px' color='white' />
-              </Flex>
+              <AspectRatioBox ratio={1 / 1} bg='facebook.500' borderRadius={20}>
+                <Flex alignItems='center' justifyContent='center'>
+                  <Box as={FaFacebookF} size='64px' color='white' />
+                </Flex>
+              </AspectRatioBox>
             </Link>
           </Box>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 3]} p={6}>
             <Link href='https://twitter.com/ycccampth' isExternal>
-              <Flex
-                alignItems='center'
-                justifyContent='center'
-                bg='twitter.500'
-                height='300px'
-                borderRadius={8}>
-                <Box as={FaTwitter} size='64px' color='white' />
-              </Flex>
+              <AspectRatioBox ratio={1 / 1} bg='twitter.500' borderRadius={20}>
+                <Flex alignItems='center' justifyContent='center'>
+                  <Box as={FaTwitter} size='64px' color='white' />
+                </Flex>
+              </AspectRatioBox>
             </Link>
           </Box>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 3]} p={6}>
             <Link href='https://www.instagram.com/ycccampth' isExternal>
-              <Flex
-                alignItems='center'
-                justifyContent='center'
-                bg='orange.500'
-                height='300px'
-                borderRadius={8}>
-                <Box as={FaInstagram} size='64px' color='white' />
-              </Flex>
+              <AspectRatioBox ratio={1 / 1} bg='pink.500' borderRadius={20}>
+                <Flex alignItems='center' justifyContent='center'>
+                  <Box as={FaInstagram} size='64px' color='white' />
+                </Flex>
+              </AspectRatioBox>
             </Link>
           </Box>
         </Flex>
