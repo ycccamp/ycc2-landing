@@ -47,7 +47,7 @@ export const Navbar: React.FC = props => {
         alignItems='center'
         height='100%'>
         <Flex
-          width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}
+          width={[22 / 24, 20 / 24, 20 / 24, 16 / 24]}
           justifyContent='center'
           display={['none', 'none', 'flex', 'flex']}
           alignItems='center'

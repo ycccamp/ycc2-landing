@@ -54,7 +54,7 @@ export const Schedule: React.FC = props => {
           {schedule.data.map(item => {
             return (
               <Box
-                width={[1 / 2, 1 / 2, 1 / 4]}
+                width={[1 / 2, 1 / 2, 1 / 2, 1 / 4]}
                 p={item.key === schedule.active ? 0 : 6}
                 key={`schedule-${item.key}`}>
                 <Box

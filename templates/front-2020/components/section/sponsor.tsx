@@ -10,7 +10,7 @@ export const Sponsor: React.FC = props => {
       minHeight='100%'
       py={20}
       id='sponsor'>
-      <Box width={[22 / 24, 19 / 24, 17 / 24, 12 / 24]}>
+      <Box width={[22 / 24, 20 / 24, 18 / 24, 12 / 24]}>
         <Heading textAlign='center' size='2xl' pb={10}>
           ผู้สนับสนุน
         </Heading>

@@ -39,7 +39,11 @@ export const Hero: React.FC = props => {
         </Text>
         <Flex justifyContent='center'>
           <Box background='white' borderRadius={15} overflow='hidden'>
-            <Button px={20} size='lg' variantColor='flory' isDisabled={true}>
+            <Button
+              px={[12, 12, 20]}
+              size='lg'
+              variantColor='flory'
+              isDisabled={true}>
               <Text>เปิดรับสมัครวันที่ 28 มกราคม</Text>
             </Button>
           </Box>
