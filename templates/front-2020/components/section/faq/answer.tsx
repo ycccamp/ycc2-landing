@@ -18,7 +18,7 @@ const Answer: React.FC<IFAQAnswer> = props => {
         boxShadow={theme.shadows['2xl']}
         borderRadius={20}>
         <Box onClick={() => setShow(prev => !prev)}>
-          <Flex alignItems='center' pb={2}>
+          <Flex alignItems='center'>
             <Heading size='md'>{question}</Heading>
             <Box mx='auto' />
             <Icon name={show ? 'chevron-down' : 'chevron-left'} />
