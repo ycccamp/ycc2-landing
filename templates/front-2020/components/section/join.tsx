@@ -8,10 +8,13 @@ import {
   Image,
   Link,
   PseudoBox,
+  useToast,
 } from '@chakra-ui/core'
 import { theme } from '../../theme'
 
 export const Join: React.FC = props => {
+  const toast = useToast()
+
   const tracks = [
     {
       key: 'programming',
@@ -26,6 +29,16 @@ export const Join: React.FC = props => {
       name: 'Creative',
     },
   ]
+
+  const notOpen = () => {
+    toast({
+      title: 'ยังไม่ถึงเวลารับสมัคร',
+      description: `Young Creator's Camp จะเปิดรับสมัครในวันที่ 28 มกราคม มากดใหม่ในวันที่ 28 นะคะ`,
+      status: 'warning',
+      duration: 4000,
+      isClosable: true,
+    })
+  }
 
   return (
     <Flex
@@ -52,26 +65,22 @@ export const Join: React.FC = props => {
                 transition-timing-function='ease-out'
                 transform='perspective(100px) translateZ(0px)'
                 boxShadow={theme.shadow.lg}
+                onClick={() => notOpen()}
                 _hover={{
                   transform: 'perspective(100px) translateZ(10px)',
                   boxShadow: theme.shadow['2xl'],
                 }}>
-                <Link
-                  href='https://regis.ycc.in.th'
-                  isExternal
-                  _hover={{ textDecoration: 'none' }}>
-                  <Heading size='md' textAlign='center'>
-                    {track.name}
-                  </Heading>
-                  <Box pt={8}>
-                    <AspectRatioBox ratio={3 / 4}>
-                      <Image
-                        src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
-                        objectFit='cover'
-                      />
-                    </AspectRatioBox>
-                  </Box>
-                </Link>
+                <Heading size='md' textAlign='center'>
+                  {track.name}
+                </Heading>
+                <Box pt={8}>
+                  <AspectRatioBox ratio={3 / 4}>
+                    <Image
+                      src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                      objectFit='cover'
+                    />
+                  </AspectRatioBox>
+                </Box>
               </PseudoBox>
             </Box>
           ))}
