@@ -78,9 +78,12 @@ export const Schedule: React.FC = props => {
                       `}
                     />
                   </AspectRatioBox>
-                  <Text textAlign='center' fontSize={['lg', 'lg', 'xl']} pt={4}>
+                  <Heading
+                    textAlign='center'
+                    fontSize={['lg', 'lg', 'xl']}
+                    pt={6}>
                     {item.title}
-                  </Text>
+                  </Heading>
                   <Text textAlign='center'>{item.date}</Text>
                 </Box>
               </Box>
