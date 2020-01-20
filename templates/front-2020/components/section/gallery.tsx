@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { AspectRatioBox, Box, Flex, Heading, Image } from '@chakra-ui/core'
+import { theme } from '../../theme'
 
 export const Gallery: React.FC = props => {
   return (
@@ -16,45 +17,54 @@ export const Gallery: React.FC = props => {
         </Heading>
         <Flex justifyContent='center'>
           <Box width={['100%', 14 / 24]} p={2}>
-            <AspectRatioBox ratio={16 / 9}>
-              <Image
-                src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
-                objectFit='cover'
-              />
+            <AspectRatioBox
+              ratio={16 / 9}
+              borderRadius={20}
+              overflow='hidden'
+              boxShadow={[
+                theme.shadows.xl,
+                theme.shadows.xl,
+                theme.shadows['2xl'],
+              ]}>
+              <Image src='/static/images/ycc-2020-1.jpg' objectFit='cover' />
             </AspectRatioBox>
           </Box>
         </Flex>
         <Flex justifyContent='center' flexWrap='wrap'>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
-            <AspectRatioBox ratio={16 / 9}>
-              <Image
-                src='https://storage.rayriffy.com/files/image/38947047_p0.png'
-                objectFit='cover'
-              />
+            <AspectRatioBox
+              ratio={16 / 9}
+              borderRadius={20}
+              overflow='hidden'
+              boxShadow={theme.shadows.xl}>
+              <Image src='/static/images/ycc-2020-2.jpg' objectFit='cover' />
             </AspectRatioBox>
           </Box>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
-            <AspectRatioBox ratio={16 / 9}>
-              <Image
-                src='https://storage.rayriffy.com/files/image/55204389_p0.png'
-                objectFit='cover'
-              />
+            <AspectRatioBox
+              ratio={16 / 9}
+              borderRadius={20}
+              overflow='hidden'
+              boxShadow={theme.shadows.xl}>
+              <Image src='/static/images/ycc-2020-3.jpg' objectFit='cover' />
             </AspectRatioBox>
           </Box>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
-            <AspectRatioBox ratio={16 / 9}>
-              <Image
-                src='https://storage.rayriffy.com/files/image/75522689_p0.png'
-                objectFit='cover'
-              />
+            <AspectRatioBox
+              ratio={16 / 9}
+              borderRadius={20}
+              overflow='hidden'
+              boxShadow={theme.shadows.xl}>
+              <Image src='/static/images/ycc-2020-4.jpg' objectFit='cover' />
             </AspectRatioBox>
           </Box>
           <Box width={['100%', 1 / 2, 1 / 2, 1 / 4]} p={2}>
-            <AspectRatioBox ratio={16 / 9}>
-              <Image
-                src='https://storage.rayriffy.com/files/image/10769220_p0.jpg'
-                objectFit='cover'
-              />
+            <AspectRatioBox
+              ratio={16 / 9}
+              borderRadius={20}
+              overflow='hidden'
+              boxShadow={theme.shadows.xl}>
+              <Image src='/static/images/ycc-2020-5.jpg' objectFit='cover' />
             </AspectRatioBox>
           </Box>
         </Flex>
