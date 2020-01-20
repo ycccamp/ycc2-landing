@@ -21,7 +21,7 @@ const Answer: React.FC<IFAQAnswer> = props => {
           <Flex alignItems='center'>
             <Heading size='md'>{question}</Heading>
             <Box mx='auto' />
-            <Icon name={show ? 'chevron-down' : 'chevron-left'} />
+            <Icon size='28px' name={show ? 'chevron-down' : 'chevron-left'} />
           </Flex>
         </Box>
         <Collapse pt={2} isOpen={show}>
