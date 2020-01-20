@@ -10,25 +10,21 @@ export const Sponsor: React.FC = props => {
       minHeight='100%'
       py={20}
       id='sponsor'>
-      <Box width={[22 / 24, 20 / 24, 18 / 24, 12 / 24]}>
+      <Box width={[22 / 24, 20 / 24, 24 / 24, 12 / 24]}>
         <Heading textAlign='center' size='2xl' pb={10}>
           ผู้สนับสนุน
         </Heading>
         <Flex alignItems='center' justifyContent='center' flexWrap='wrap'>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((_, i) => (
-            <Box
-              key={`sponsor-${i}`}
-              width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]}
-              p={6}>
-              <AspectRatioBox ratio={1 / 1}>
-                <Image
-                  src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
-                  rounded='full'
-                  objectFit='cover'
-                />
-              </AspectRatioBox>
-            </Box>
-          ))}
+          <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
+            <AspectRatioBox ratio={1 / 1} background='white'>
+              <Image src='/static/images/ycc-2020-sponsor-rise.svg' />
+            </AspectRatioBox>
+          </Box>
+          <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
+            <AspectRatioBox ratio={1 / 1}>
+              <Image src='/static/images/ycc-2020-sponsor-svl.svg' />
+            </AspectRatioBox>
+          </Box>
         </Flex>
       </Box>
     </Flex>
