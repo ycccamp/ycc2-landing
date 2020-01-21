@@ -24,10 +24,7 @@ class NextApp extends App {
             property='og:description'
             content='ค่ายเปลี่ยนวันมันธ์เป็น "นักสร้างสรรค์" ใน 3 วัน'
           />
-          <meta
-            property='og:image'
-            content='https://ycc.in.th/static/images/og-2020.jpg'
-          />
+          <meta property='og:image' content='https://ycc.in.th/static/og.jpg' />
 
           <meta property='twitter:card' content='summary_large_image' />
           <meta property='twitter:url' content='https://ycc.in.th/' />
@@ -38,7 +35,7 @@ class NextApp extends App {
           />
           <meta
             property='twitter:image'
-            content='https://ycc.in.th/static/images/og-2020.jpg'
+            content='https://ycc.in.th/static/og.jpg'
           />
         </Head>
         <AppShell>

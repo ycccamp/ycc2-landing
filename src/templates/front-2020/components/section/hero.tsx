@@ -5,9 +5,6 @@ import { Box, Button, Flex, Image, Link, Text, useTheme } from '@chakra-ui/core'
 export const Hero: React.FC = props => {
   const theme = useTheme()
 
-  const size = 10
-  const space = 150
-
   return (
     <Flex
       justifyContent='center'
@@ -18,7 +15,10 @@ export const Hero: React.FC = props => {
       <Box px={4}>
         <Flex justifyContent='center' pb={10}>
           <Box maxWidth='400px' width={1 / 2}>
-            <Image src='/static/images/ycclogo-2020.png' alt='YCC Logo' />
+            <Image
+              src={require('../../../../../assets/image/ycclogo-2020.png?resize&size=400')}
+              alt='YCC Logo'
+            />
           </Box>
         </Flex>
         <Text

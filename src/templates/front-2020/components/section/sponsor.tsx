@@ -10,7 +10,7 @@ export const Sponsor: React.FC = props => {
       minHeight='100%'
       py={20}
       id='sponsor'>
-      <Box width={[22 / 24, 20 / 24, 24 / 24, 12 / 24]}>
+      <Box width={[22 / 24, 20 / 24, 22 / 24, 12 / 24]}>
         <Heading textAlign='center' size='2xl' pb={10}>
           ผู้สนับสนุน
         </Heading>
@@ -18,14 +18,17 @@ export const Sponsor: React.FC = props => {
           <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
             <AspectRatioBox ratio={1 / 1} background='white'>
               <Image
-                src='/static/images/ycc-2020-sponsor-rise.svg'
+                src={require('../../../../../assets/image/ycc-2020-sponsor-rise.svg')}
                 alt='RISE'
               />
             </AspectRatioBox>
           </Box>
           <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
             <AspectRatioBox ratio={1 / 1}>
-              <Image src='/static/images/ycc-2020-sponsor-svl.svg' alt='SVL' />
+              <Image
+                src={require('../../../../../assets/image/ycc-2020-sponsor-svl.svg')}
+                alt='SVL'
+              />
             </AspectRatioBox>
           </Box>
         </Flex>

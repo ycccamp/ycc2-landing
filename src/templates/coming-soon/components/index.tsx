@@ -32,7 +32,10 @@ const ComingSoonComponent: React.FC = props => {
         <Box>
           <Flex justifyContent={`center`}>
             <Box width={[14 / 24, 12 / 24, 10 / 24, 8 / 24]}>
-              <Image src='/static/images/ycclogo.png' alt='YCC 1 Logo' />
+              <Image
+                src={require('../../../../assets/image/ycclogo.png')}
+                alt='YCC 1 Logo'
+              />
             </Box>
           </Flex>
           <Box px={3} py={2}>

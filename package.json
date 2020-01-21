@@ -14,11 +14,22 @@
     "babel-plugin-emotion": "^10.0.27",
     "color": "^3.1.2",
     "emotion-theming": "^10.0.27",
+    "image-trace-loader": "^1.0.2",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-svgo": "^7.0.0",
+    "jimp": "^0.9.3",
+    "lqip-loader": "^2.2.0",
     "next": "^9.2.0",
+    "next-optimized-images": "^2.5.4",
     "preact": "^10.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-icons": "^3.8.0"
+    "react-icons": "^3.8.0",
+    "responsive-loader": "^1.2.0",
+    "svg-sprite-loader": "^4.1.6",
+    "webp-loader": "^0.6.0"
   },
   "scripts": {
     "dev": "next",

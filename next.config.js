@@ -1,3 +1,5 @@
+const optimizedImages = require('next-optimized-images')
+
 const withPreact = (nextConfig = {}) => {
 	return Object.assign({}, nextConfig, {
 		webpack(config, options) {
@@ -27,6 +29,19 @@ const withPreact = (nextConfig = {}) => {
 	})
 }
 
-module.exports = withPreact({
-  exportTrailingSlash: true,
-})
+module.exports = optimizedImages(
+	withPreact({
+		exportTrailingSlash: true,
+		optimizeImagesInDev: true,
+    mozjpeg: {
+      quality: 80,
+    },
+    optipng: {
+      optimizationLevel: 3,
+    },
+    webp: {
+      preset: 'default',
+      quality: 75,
+    },
+	})
+)
