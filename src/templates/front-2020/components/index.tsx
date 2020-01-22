@@ -7,6 +7,7 @@ import { css, Global } from '@emotion/core'
 
 import { theme } from '../theme'
 
+import { Grid } from './grid'
 import { Navbar } from './navbar'
 import {
   About,
@@ -22,9 +23,6 @@ import {
 } from './section'
 
 const FrontComponent: React.FC = props => {
-  const size = 10
-  const space = 150
-
   return (
     <React.Fragment>
       <Head>
@@ -45,22 +43,16 @@ const FrontComponent: React.FC = props => {
             html {
               scroll-behavior: smooth;
             }
-
             body {
-              background-image: radial-gradient(
-                  rgba(64, 147, 164, 0.5) ${size}px,
-                  transparent ${size}px
-                ),
-                radial-gradient(
-                  rgba(232, 100, 119, 0.5) ${size}px,
-                  transparent ${size}px
-                );
-              background-size: ${space * 2}px ${space * 2}px;
-              background-position: 0 0, ${space}px ${space}px;
-              animation: lineMove 2s infinite linear;
+              background: linear-gradient(
+                270deg,
+                rgba(244, 215, 242, 1) 0%,
+                rgba(255, 255, 255, 1) 100%
+              );
             }
           `}
         />
+        <Grid />
         <Navbar />
         <Hero />
         <About />

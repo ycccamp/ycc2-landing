@@ -29,6 +29,7 @@
     "react-icons": "^3.8.0",
     "responsive-loader": "^1.2.0",
     "svg-sprite-loader": "^4.1.6",
+    "web-api-hooks": "^2.2.2",
     "webp-loader": "^0.6.0"
   },
   "scripts": {
