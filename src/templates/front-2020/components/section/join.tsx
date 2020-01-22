@@ -6,7 +6,6 @@ import {
   Flex,
   Heading,
   Image,
-  Link,
   PseudoBox,
   useToast,
 } from '@chakra-ui/core'

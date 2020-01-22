@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Button, Flex, Image, Link, Text, useTheme } from '@chakra-ui/core'
+import { Box, Button, Flex, Image, Text, useTheme } from '@chakra-ui/core'
 
 export const Hero: React.FC = props => {
   const theme = useTheme()
