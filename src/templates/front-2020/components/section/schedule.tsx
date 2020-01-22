@@ -6,10 +6,8 @@ import {
   Flex,
   Heading,
   Image,
-  PseudoBox,
   Text,
 } from '@chakra-ui/core'
-import { css } from '@emotion/core'
 import { theme } from '../../theme'
 
 export const Schedule: React.FC = props => {
@@ -72,11 +70,6 @@ export const Schedule: React.FC = props => {
                       alt={item.key}
                       rounded='full'
                       objectFit='cover'
-                      css={css`
-                        filter: grayscale(
-                          ${item.key !== schedule.active ? `100` : `0`}%
-                        );
-                      `}
                     />
                   </AspectRatioBox>
                   <Heading
