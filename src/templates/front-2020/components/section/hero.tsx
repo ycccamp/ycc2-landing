@@ -16,7 +16,7 @@ export const Hero: React.FC = props => {
         <Flex justifyContent='center' pb={10}>
           <Box maxWidth='400px' width={1 / 2}>
             <Image
-              src={require('../../../../../assets/image/ycclogo-2020.png?resize&size=400')}
+              src={require('../../../../../assets/image/2020/logo.png?resize&size=400')}
               alt='YCC Logo'
             />
           </Box>

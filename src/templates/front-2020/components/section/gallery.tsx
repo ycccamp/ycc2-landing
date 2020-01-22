@@ -27,7 +27,7 @@ export const Gallery: React.FC = props => {
                 theme.shadows['2xl'],
               ]}>
               <Image
-                src={require('../../../../../assets/image/ycc-2020-1.jpg?resize&size=600')}
+                src={require('../../../../../assets/image/2020/gallery-1.jpg?resize&size=600')}
                 alt='Gallery Image 1'
                 objectFit='cover'
               />
@@ -42,7 +42,7 @@ export const Gallery: React.FC = props => {
               overflow='hidden'
               boxShadow={theme.shadows.xl}>
               <Image
-                src={require('../../../../../assets/image/ycc-2020-2.jpg?resize&size=500')}
+                src={require('../../../../../assets/image/2020/gallery-2.jpg?resize&size=500')}
                 alt='Gallery Image 2'
                 objectFit='cover'
               />
@@ -55,7 +55,7 @@ export const Gallery: React.FC = props => {
               overflow='hidden'
               boxShadow={theme.shadows.xl}>
               <Image
-                src={require('../../../../../assets/image/ycc-2020-3.jpg?resize&size=500')}
+                src={require('../../../../../assets/image/2020/gallery-3.jpg?resize&size=500')}
                 alt='Gallery Image 3'
                 objectFit='cover'
               />
@@ -68,7 +68,7 @@ export const Gallery: React.FC = props => {
               overflow='hidden'
               boxShadow={theme.shadows.xl}>
               <Image
-                src={require('../../../../../assets/image/ycc-2020-4.jpg?resize&size=500')}
+                src={require('../../../../../assets/image/2020/gallery-4.jpg?resize&size=500')}
                 alt='Gallery Image 4'
                 objectFit='cover'
               />
@@ -81,7 +81,7 @@ export const Gallery: React.FC = props => {
               overflow='hidden'
               boxShadow={theme.shadows.xl}>
               <Image
-                src={require('../../../../../assets/image/ycc-2020-5.jpg?resize&size=500')}
+                src={require('../../../../../assets/image/2020/gallery-5.jpg?resize&size=500')}
                 alt='Gallery Image 5'
                 objectFit='cover'
               />

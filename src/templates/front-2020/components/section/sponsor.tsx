@@ -18,7 +18,7 @@ export const Sponsor: React.FC = props => {
           <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
             <AspectRatioBox ratio={1 / 1} background='white'>
               <Image
-                src={require('../../../../../assets/image/ycc-2020-sponsor-rise.svg')}
+                src={require('../../../../../assets/image/2020/sponsor-rise.svg')}
                 alt='RISE'
               />
             </AspectRatioBox>
@@ -26,7 +26,7 @@ export const Sponsor: React.FC = props => {
           <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
             <AspectRatioBox ratio={1 / 1}>
               <Image
-                src={require('../../../../../assets/image/ycc-2020-sponsor-svl.svg')}
+                src={require('../../../../../assets/image/2020/sponsor-svl.svg')}
                 alt='SVL'
               />
             </AspectRatioBox>
