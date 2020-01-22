@@ -16,7 +16,7 @@ export const Sponsor: React.FC = props => {
         </Heading>
         <Flex alignItems='center' justifyContent='center' flexWrap='wrap'>
           <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
-            <AspectRatioBox ratio={1 / 1} background='white'>
+            <AspectRatioBox ratio={1 / 1}>
               <Image
                 src={require('../../../../../assets/image/2020/sponsor-rise.svg')}
                 alt='RISE'
