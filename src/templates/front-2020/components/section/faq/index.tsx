@@ -18,7 +18,7 @@ export const FAQ: React.FC = props => {
         <Heading textAlign='center' size='2xl' pb={10}>
           คำถามที่พบบ่อย
         </Heading>
-        <Flex alignItems='center' flexWrap='wrap'>
+        <Flex alignItems='flex-start' flexWrap='wrap'>
           {faq.map((question, i) => {
             return (
               <Answer
