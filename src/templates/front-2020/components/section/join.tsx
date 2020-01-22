@@ -76,7 +76,7 @@ export const Join: React.FC = props => {
                 <Box pt={8}>
                   <AspectRatioBox ratio={3 / 4}>
                     <Image
-                      src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                      src={require(`../../../../../assets/image/2020/track-${track.key}.png`)}
                       objectFit='cover'
                       alt={`Character ${track.name}`}
                     />

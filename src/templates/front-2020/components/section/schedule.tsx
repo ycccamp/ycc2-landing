@@ -51,10 +51,10 @@ export const Schedule: React.FC = props => {
           ระยะเวลา
         </Heading>
         <Flex flexWrap='wrap' alignItems='center'>
-          {schedule.data.map(item => {
+          {schedule.data.map((item, i) => {
             return (
               <Box
-                width={[1 / 2, 1 / 2, 1 / 2, 1 / 4]}
+                width={['100%', 1 / 2, 1 / 2, 1 / 4]}
                 p={item.key === schedule.active ? 0 : 6}
                 key={`schedule-${item.key}`}>
                 <Box
@@ -68,7 +68,7 @@ export const Schedule: React.FC = props => {
                   }>
                   <AspectRatioBox ratio={1 / 1}>
                     <Image
-                      src='https://storage.rayriffy.com/files/image/72982525_p0.jpg'
+                      src={require(`../../../../../assets/image/2020/schedule-${i}.png?resize&size=400`)}
                       alt={item.key}
                       rounded='full'
                       objectFit='cover'
