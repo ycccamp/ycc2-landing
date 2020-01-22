@@ -61,6 +61,7 @@ export const Join: React.FC = props => {
                 bg='white'
                 p={8}
                 borderRadius={20}
+                cursor='pointer'
                 transition='200ms'
                 transition-timing-function='ease-out'
                 transform='perspective(100px) translateZ(0px)'

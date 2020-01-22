@@ -17,7 +17,7 @@ const Answer: React.FC<IFAQAnswer> = props => {
         p={6}
         boxShadow={theme.shadows['2xl']}
         borderRadius={20}>
-        <Box onClick={() => setShow(prev => !prev)}>
+        <Box onClick={() => setShow(prev => !prev)} cursor='pointer'>
           <Flex alignItems='center'>
             <Heading size='md'>{question}</Heading>
             <Box mx='auto' />
