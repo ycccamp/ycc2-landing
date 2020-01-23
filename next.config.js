@@ -34,14 +34,14 @@ module.exports = optimizedImages(
 		exportTrailingSlash: true,
 		optimizeImagesInDev: true,
     mozjpeg: {
-      quality: 80,
+      quality: 75,
     },
     optipng: {
-      optimizationLevel: 3,
+      optimizationLevel: 2,
     },
     webp: {
       preset: 'default',
       quality: 75,
-    },
+		},
 	})
 )

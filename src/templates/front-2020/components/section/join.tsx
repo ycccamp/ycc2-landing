@@ -1,11 +1,12 @@
 import React from 'react'
 
+import Img from 'gatsby-image'
+
 import {
   AspectRatioBox,
   Box,
   Flex,
   Heading,
-  Image,
   PseudoBox,
   useToast,
 } from '@chakra-ui/core'
@@ -39,6 +40,23 @@ export const Join: React.FC = props => {
     })
   }
 
+  const generateFluid = (src: string, size: number = 500) => {
+    const images = require(`../../../../../assets/image/2020/${src}?resize&sizes[]=200&sizes[]=300&sizes[]=500`)
+    const webP = require(`../../../../../assets/image/2020/${src}?webp`)
+    const trace = require(`../../../../../assets/image/2020/${src}?trace`).trace
+
+    const res = {
+      src: images.src,
+      srcSet: images.srcSet,
+      srcWebp: webP,
+      tracedSVG: trace,
+      aspectRatio: images.width / images.height,
+      sizes: `(max-width: ${size}px) 100vw, ${size}px`,
+    }
+
+    return res
+  }
+
   return (
     <Flex
       justifyContent='center'
@@ -58,7 +76,8 @@ export const Join: React.FC = props => {
               width={['100%', 1 / 2, 1 / 2, 1 / 3]}>
               <PseudoBox
                 bg='white'
-                p={8}
+                pt={8}
+                overflow='hidden'
                 borderRadius={20}
                 cursor='pointer'
                 transition='200ms'
@@ -75,11 +94,9 @@ export const Join: React.FC = props => {
                 </Heading>
                 <Box pt={8}>
                   <AspectRatioBox ratio={3 / 4}>
-                    <Image
-                      src={require(`../../../../../assets/image/2020/track-${track.key}.png`)}
-                      objectFit='cover'
-                      alt={`Character ${track.name}`}
-                    />
+                    <Box objectFit='cover'>
+                      <Img fluid={generateFluid(`track-${track.key}.png`)} />
+                    </Box>
                   </AspectRatioBox>
                 </Box>
               </PseudoBox>

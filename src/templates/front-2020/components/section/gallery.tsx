@@ -1,11 +1,27 @@
 import React from 'react'
 
+import Img from 'gatsby-image'
+
 import { AspectRatioBox, Box, Flex, Heading } from '@chakra-ui/core'
 import { theme } from '../../theme'
 
 export const Gallery: React.FC = props => {
-  const mainImage = require('../../../../../assets/image/2020/gallery-1.jpg?resize&sizes[]=200&sizes[]=300sizes[]=400&sizes[]=600')
-  const mainImageWebP = require(`../../../../../assets/image/2020/gallery-1.jpg?webp`)
+  const generateFluid = (src: string, size: number = 600) => {
+    const images = require(`../../../../../assets/image/2020/${src}?resize&sizes[]=200&sizes[]=400&sizes[]=600`)
+    const webP = require(`../../../../../assets/image/2020/${src}?webp`)
+    const trace = require(`../../../../../assets/image/2020/${src}?trace`).trace
+
+    const res = {
+      src: images.src,
+      srcSet: images.srcSet,
+      srcWebp: webP,
+      tracedSVG: trace,
+      aspectRatio: images.width / images.height,
+      sizes: `(max-width: ${size}px) 100vw, ${size}px`,
+    }
+
+    return res
+  }
 
   return (
     <Flex
@@ -30,28 +46,13 @@ export const Gallery: React.FC = props => {
                 theme.shadows['2xl'],
               ]}>
               <Box objectFit='cover'>
-                <picture>
-                  <source srcSet={mainImageWebP} type='image/webp' />
-                  <source
-                    src={mainImage.src}
-                    srcSet={mainImage.srcSet}
-                    type='image/jpeg'
-                  />
-                  <img
-                    src={mainImage.src}
-                    srcSet={mainImage.srcSet}
-                    alt='Gallery Image 1'
-                  />
-                </picture>
+                <Img fluid={generateFluid('gallery-1.jpg')} />
               </Box>
             </AspectRatioBox>
           </Box>
         </Flex>
         <Flex justifyContent='center' flexWrap='wrap'>
           {[2, 3, 4, 5].map(o => {
-            const image = require(`../../../../../assets/image/2020/gallery-${o}.jpg?resize&sizes[]=200&sizes[]=300sizes[]=400&sizes[]=600`)
-            const webP = require(`../../../../../assets/image/2020/gallery-${o}.jpg?webp`)
-
             return (
               <Box
                 width={['100%', 1 / 2, 1 / 2, 1 / 4]}
@@ -63,19 +64,7 @@ export const Gallery: React.FC = props => {
                   overflow='hidden'
                   boxShadow={theme.shadows.xl}>
                   <Box objectFit='cover'>
-                    <picture>
-                      <source srcSet={webP} type='image/webp' />
-                      <source
-                        src={image.src}
-                        srcSet={image.srcSet}
-                        type='image/jpeg'
-                      />
-                      <img
-                        src={image.src}
-                        srcSet={image.srcSet}
-                        alt={`Gallery Image ${o}`}
-                      />
-                    </picture>
+                    <Img fluid={generateFluid(`gallery-${o}.jpg`)} />
                   </Box>
                 </AspectRatioBox>
               </Box>
