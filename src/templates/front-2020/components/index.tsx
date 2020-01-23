@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Head from 'next/head'
 
@@ -24,11 +24,19 @@ import {
 
 import { usePreview } from '../../../core/services/usePreview'
 
+import smoothscroll from 'smoothscroll-polyfill'
+
 const FrontComponent: React.FC = props => {
   const mode = usePreview()
 
   const size = 10
   const space = 150
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      smoothscroll.polyfill()
+    }
+  }, [])
 
   return (
     <React.Fragment>
@@ -50,6 +58,7 @@ const FrontComponent: React.FC = props => {
             <Global
               styles={css`
                 html {
+                  --scroll-behavior: smooth;
                   scroll-behavior: smooth;
                 }
                 body {

@@ -55,6 +55,11 @@ const Drawer: React.FC<IDrawerProps> = props => {
                     <Box py={1}>
                       <Link
                         href={`${item.href}`}
+                        onClick={() =>
+                          document
+                            .querySelector(item.href.toString())
+                            .scrollIntoView({ behavior: 'smooth' })
+                        }
                         _hover={{ textDecoration: 'none' }}>
                         <Text
                           fontSize='sm'

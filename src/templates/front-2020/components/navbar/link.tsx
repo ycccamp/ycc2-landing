@@ -28,7 +28,17 @@ const NavLink: React.FC<INavbarLinkProps> = props => {
     </PseudoBox>
   )
 
-  return <a href={href.toString()}>{innerLink}</a>
+  return (
+    <a
+      href={href.toString()}
+      onClick={() =>
+        document
+          .querySelector(href.toString())
+          .scrollIntoView({ behavior: 'smooth' })
+      }>
+      {innerLink}
+    </a>
+  )
 }
 
 export default NavLink
