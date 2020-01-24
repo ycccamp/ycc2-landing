@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Img from 'gatsby-image'
 
 import { AspectRatioBox, Box, Flex, Heading, Text } from '@chakra-ui/core'
 import { theme } from '../../theme'
+
+import { Fluid } from '../../../../pages'
 
 export const Schedule: React.FC = props => {
   const schedule = {
@@ -32,22 +34,7 @@ export const Schedule: React.FC = props => {
     ],
   }
 
-  const generateFluid = (src: string, size: number = 300) => {
-    const images = require(`../../../../../assets/image/2020/${src}?resize&sizes[]=200&sizes[]=300`)
-    const webP = require(`../../../../../assets/image/2020/${src}?webp`)
-    const trace = require(`../../../../../assets/image/2020/${src}?trace`).trace
-
-    const res = {
-      src: images.src,
-      srcSet: images.srcSet,
-      srcWebp: webP,
-      tracedSVG: trace,
-      aspectRatio: images.width / images.height,
-      sizes: `(max-width: ${size}px) 100vw, ${size}px`,
-    }
-
-    return res
-  }
+  const context = useContext(Fluid)
 
   return (
     <Flex
@@ -78,7 +65,7 @@ export const Schedule: React.FC = props => {
                   }>
                   <AspectRatioBox ratio={1 / 1}>
                     <Box objectFit='cover' borderRadius={999} overflow='hidden'>
-                      <Img fluid={generateFluid(`schedule-${i}.png`)} />
+                      <Img fluid={context.schedule[i]} />
                     </Box>
                   </AspectRatioBox>
                   <Heading

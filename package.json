@@ -16,7 +16,7 @@
     "emotion-theming": "^10.0.27",
     "gatsby-image": "^2.2.39",
     "image-trace-loader": "^1.0.2",
-    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.0.0",

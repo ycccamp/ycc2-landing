@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Img from 'gatsby-image'
 
@@ -11,6 +11,8 @@ import {
   useToast,
 } from '@chakra-ui/core'
 import { theme } from '../../theme'
+
+import { Fluid } from '../../../../pages'
 
 export const Join: React.FC = props => {
   const toast = useToast()
@@ -40,22 +42,7 @@ export const Join: React.FC = props => {
     })
   }
 
-  const generateFluid = (src: string, size: number = 500) => {
-    const images = require(`../../../../../assets/image/2020/${src}?resize&sizes[]=200&sizes[]=300&sizes[]=500`)
-    const webP = require(`../../../../../assets/image/2020/${src}?webp`)
-    const trace = require(`../../../../../assets/image/2020/${src}?trace`).trace
-
-    const res = {
-      src: images.src,
-      srcSet: images.srcSet,
-      srcWebp: webP,
-      tracedSVG: trace,
-      aspectRatio: images.width / images.height,
-      sizes: `(max-width: ${size}px) 100vw, ${size}px`,
-    }
-
-    return res
-  }
+  const context = useContext(Fluid)
 
   return (
     <Flex
@@ -95,7 +82,7 @@ export const Join: React.FC = props => {
                 <Box pt={8}>
                   <AspectRatioBox ratio={3 / 4}>
                     <Box objectFit='cover'>
-                      <Img fluid={generateFluid(`track-${track.key}.png`)} />
+                      <Img fluid={context.track[track.key]} />
                     </Box>
                   </AspectRatioBox>
                 </Box>

@@ -37,7 +37,7 @@ module.exports = optimizedImages(
       quality: 75,
     },
     optipng: {
-      optimizationLevel: 2,
+      optimizationLevel: 3,
     },
     webp: {
       preset: 'default',

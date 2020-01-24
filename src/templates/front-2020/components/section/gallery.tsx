@@ -1,27 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Img from 'gatsby-image'
 
 import { AspectRatioBox, Box, Flex, Heading } from '@chakra-ui/core'
 import { theme } from '../../theme'
 
+import { Fluid } from '../../../../pages'
+
 export const Gallery: React.FC = props => {
-  const generateFluid = (src: string, size: number = 600) => {
-    const images = require(`../../../../../assets/image/2020/${src}?resize&sizes[]=200&sizes[]=400&sizes[]=600`)
-    const webP = require(`../../../../../assets/image/2020/${src}?webp`)
-    const trace = require(`../../../../../assets/image/2020/${src}?trace`).trace
-
-    const res = {
-      src: images.src,
-      srcSet: images.srcSet,
-      srcWebp: webP,
-      tracedSVG: trace,
-      aspectRatio: images.width / images.height,
-      sizes: `(max-width: ${size}px) 100vw, ${size}px`,
-    }
-
-    return res
-  }
+  const context = useContext(Fluid)
 
   return (
     <Flex
@@ -46,25 +33,25 @@ export const Gallery: React.FC = props => {
                 theme.shadows['2xl'],
               ]}>
               <Box objectFit='cover'>
-                <Img fluid={generateFluid('gallery-1.jpg')} />
+                <Img fluid={context.gallery.main} />
               </Box>
             </AspectRatioBox>
           </Box>
         </Flex>
         <Flex justifyContent='center' flexWrap='wrap'>
-          {[2, 3, 4, 5].map(o => {
+          {context.gallery.sub.map((fluid, i) => {
             return (
               <Box
                 width={['100%', 1 / 2, 1 / 2, 1 / 4]}
                 p={2}
-                key={`gallery-${o}`}>
+                key={`gallery-${i + 2}`}>
                 <AspectRatioBox
                   ratio={16 / 9}
                   borderRadius={20}
                   overflow='hidden'
                   boxShadow={theme.shadows.xl}>
                   <Box objectFit='cover'>
-                    <Img fluid={generateFluid(`gallery-${o}.jpg`)} />
+                    <Img fluid={fluid} />
                   </Box>
                 </AspectRatioBox>
               </Box>
