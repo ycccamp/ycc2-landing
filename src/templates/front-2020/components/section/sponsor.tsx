@@ -3,6 +3,8 @@ import React from 'react'
 import { AspectRatioBox, Box, Flex, Heading, Image } from '@chakra-ui/core'
 
 export const Sponsor: React.FC = props => {
+  const sponsors = ['rise', 'svl', 'dekd']
+
   return (
     <Flex
       justifyContent='center'
@@ -15,22 +17,21 @@ export const Sponsor: React.FC = props => {
           ผู้สนับสนุน
         </Heading>
         <Flex alignItems='center' justifyContent='center' flexWrap='wrap'>
-          <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
-            <AspectRatioBox ratio={1 / 1}>
-              <Image
-                src={require('../../../../../assets/image/2020/sponsor-rise.svg')}
-                alt='RISE'
-              />
-            </AspectRatioBox>
-          </Box>
-          <Box width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]} p={6}>
-            <AspectRatioBox ratio={1 / 1}>
-              <Image
-                src={require('../../../../../assets/image/2020/sponsor-svl.svg')}
-                alt='SVL'
-              />
-            </AspectRatioBox>
-          </Box>
+          {sponsors.map(sponsor => (
+            <Box
+              key={`sponsor-${sponsor}`}
+              width={[1 / 2, 1 / 2, 1 / 4, 1 / 4]}
+              p={6}>
+              <AspectRatioBox ratio={1 / 1}>
+                <Flex objectFit='cover' alignItems='center'>
+                  <Image
+                    src={require(`../../../../../assets/image/2020/sponsor-${sponsor}.svg`)}
+                    alt={sponsor}
+                  />
+                </Flex>
+              </AspectRatioBox>
+            </Box>
+          ))}
         </Flex>
       </Box>
     </Flex>
