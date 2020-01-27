@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Flex, Heading, Text, theme } from '@chakra-ui/core'
+import { Box, Flex, Heading } from '@chakra-ui/core'
 
 import Answer from './answer'
 
@@ -18,7 +18,7 @@ export const FAQ: React.FC = props => {
         <Heading textAlign='center' size='2xl' pb={10}>
           คำถามที่พบบ่อย
         </Heading>
-        <Flex alignItems='center' flexWrap='wrap'>
+        <Flex alignItems='flex-start' flexWrap='wrap'>
           {faq.map((question, i) => {
             return (
               <Answer

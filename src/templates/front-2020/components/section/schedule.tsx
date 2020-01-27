@@ -1,16 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import {
-  AspectRatioBox,
-  Box,
-  Flex,
-  Heading,
-  Image,
-  PseudoBox,
-  Text,
-} from '@chakra-ui/core'
-import { css } from '@emotion/core'
+import Img from 'gatsby-image'
+
+import { AspectRatioBox, Box, Flex, Heading, Text } from '@chakra-ui/core'
 import { theme } from '../../theme'
+
+import { Fluid } from '../../../../pages'
 
 export const Schedule: React.FC = props => {
   const schedule = {
@@ -38,6 +33,8 @@ export const Schedule: React.FC = props => {
       },
     ],
   }
+
+  const context = useContext(Fluid)
 
   return (
     <Flex
@@ -68,17 +65,9 @@ export const Schedule: React.FC = props => {
                   }
                   opacity={!(item.key === schedule.active) ? 0.4 : 1}>
                   <AspectRatioBox ratio={1 / 1}>
-                    <Image
-                      src={require(`../../../../../assets/image/2020/schedule-${i}.png?resize&size=400`)}
-                      alt={item.key}
-                      rounded='full'
-                      objectFit='cover'
-                      css={css`
-                        filter: grayscale(
-                          ${item.key !== schedule.active ? `100` : `0`}%
-                        );
-                      `}
-                    />
+                    <Box objectFit='cover' borderRadius={999} overflow='hidden'>
+                      <Img fluid={context.schedule[i]} />
+                    </Box>
                   </AspectRatioBox>
                   <Heading
                     textAlign='center'

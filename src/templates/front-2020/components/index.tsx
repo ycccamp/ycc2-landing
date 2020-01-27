@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Head from 'next/head'
 
@@ -7,6 +7,7 @@ import { css, Global } from '@emotion/core'
 
 import { theme } from '../theme'
 
+import { Grid } from './grid'
 import { Navbar } from './navbar'
 import {
   About,
@@ -21,9 +22,21 @@ import {
   Venue,
 } from './section'
 
+import { usePreview } from '../../../core/services/usePreview'
+
+import smoothscroll from 'smoothscroll-polyfill'
+
 const FrontComponent: React.FC = props => {
+  const mode = usePreview()
+
   const size = 10
   const space = 150
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      smoothscroll.polyfill()
+    }
+  }, [])
 
   return (
     <React.Fragment>
@@ -40,27 +53,47 @@ const FrontComponent: React.FC = props => {
       </Head>
       <ThemeProvider theme={theme}>
         <CSSReset />
-        <Global
-          styles={css`
-            html {
-              scroll-behavior: smooth;
-            }
-
-            body {
-              background-image: radial-gradient(
-                  rgba(64, 147, 164, 0.5) ${size}px,
-                  transparent ${size}px
-                ),
-                radial-gradient(
-                  rgba(232, 100, 119, 0.5) ${size}px,
-                  transparent ${size}px
-                );
-              background-size: ${space * 2}px ${space * 2}px;
-              background-position: 0 0, ${space}px ${space}px;
-              animation: lineMove 2s infinite linear;
-            }
-          `}
-        />
+        {mode === 1 ? (
+          <React.Fragment>
+            <Global
+              styles={css`
+                html {
+                  --scroll-behavior: smooth;
+                  scroll-behavior: smooth;
+                }
+                body {
+                  background: linear-gradient(
+                    270deg,
+                    rgba(244, 215, 242, 1) 0%,
+                    rgba(255, 255, 255, 1) 100%
+                  );
+                }
+              `}
+            />
+            <Grid />
+          </React.Fragment>
+        ) : (
+          <Global
+            styles={css`
+              html {
+                scroll-behavior: smooth;
+              }
+              body {
+                background-image: radial-gradient(
+                    rgba(64, 147, 164, 0.5) ${size}px,
+                    transparent ${size}px
+                  ),
+                  radial-gradient(
+                    rgba(232, 100, 119, 0.5) ${size}px,
+                    transparent ${size}px
+                  );
+                background-size: ${space * 2}px ${space * 2}px;
+                background-position: 0 0, ${space}px ${space}px;
+                animation: lineMove 2s infinite linear;
+              }
+            `}
+          />
+        )}
         <Navbar />
         <Hero />
         <About />

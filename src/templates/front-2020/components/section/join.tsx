@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import Img from 'gatsby-image'
 
 import {
   AspectRatioBox,
   Box,
   Flex,
   Heading,
-  Image,
-  Link,
   PseudoBox,
   useToast,
 } from '@chakra-ui/core'
 import { theme } from '../../theme'
+
+import { Fluid } from '../../../../pages'
 
 export const Join: React.FC = props => {
   const toast = useToast()
@@ -40,6 +42,8 @@ export const Join: React.FC = props => {
     })
   }
 
+  const context = useContext(Fluid)
+
   return (
     <Flex
       justifyContent='center'
@@ -59,7 +63,8 @@ export const Join: React.FC = props => {
               width={['100%', 1 / 2, 1 / 2, 1 / 3]}>
               <PseudoBox
                 bg='white'
-                p={8}
+                pt={8}
+                overflow='hidden'
                 borderRadius={20}
                 cursor='pointer'
                 transition='200ms'
@@ -76,11 +81,9 @@ export const Join: React.FC = props => {
                 </Heading>
                 <Box pt={8}>
                   <AspectRatioBox ratio={3 / 4}>
-                    <Image
-                      src={require(`../../../../../assets/image/2020/track-${track.key}.png`)}
-                      objectFit='cover'
-                      alt={`Character ${track.name}`}
-                    />
+                    <Box objectFit='cover'>
+                      <Img fluid={context.track[track.key]} />
+                    </Box>
                   </AspectRatioBox>
                 </Box>
               </PseudoBox>

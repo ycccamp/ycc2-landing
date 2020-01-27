@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 
-import { AspectRatioBox, Box, Flex, Heading, Link, Text } from '@chakra-ui/core'
+import { AspectRatioBox, Box, Flex, Heading, Link } from '@chakra-ui/core'
 
 export const Contact: React.FC = props => {
   return (

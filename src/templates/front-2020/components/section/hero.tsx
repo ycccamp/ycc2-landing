@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import { Box, Button, Flex, Image, Link, Text, useTheme } from '@chakra-ui/core'
+import Img from 'gatsby-image'
+
+import { Box, Button, Flex, Text, useTheme } from '@chakra-ui/core'
+
+import { Fluid } from '../../../../pages'
 
 export const Hero: React.FC = props => {
   const theme = useTheme()
+
+  const context = useContext(Fluid)
 
   return (
     <Flex
@@ -15,10 +21,9 @@ export const Hero: React.FC = props => {
       <Box px={4}>
         <Flex justifyContent='center' pb={10}>
           <Box maxWidth='400px' width={1 / 2}>
-            <Image
-              src={require('../../../../../assets/image/2020/logo.png?resize&size=400')}
-              alt='YCC Logo'
-            />
+            <Box objectFit='cover'>
+              <Img fluid={context.logo} />
+            </Box>
           </Box>
         </Flex>
         <Text
