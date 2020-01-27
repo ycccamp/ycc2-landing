@@ -65,7 +65,8 @@ export const Schedule: React.FC = props => {
                     item.key === schedule.active
                       ? theme.shadow['2xl']
                       : theme.shadow.lg
-                  }>
+                  }
+                  opacity={!(item.key === schedule.active) ? 0.4 : 1}>
                   <AspectRatioBox ratio={1 / 1}>
                     <Image
                       src={require(`../../../../../assets/image/2020/schedule-${i}.png?resize&size=400`)}
