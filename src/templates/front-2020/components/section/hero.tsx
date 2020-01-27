@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import Img from 'gatsby-image'
 
-import { Box, Button, Flex, Text, useTheme } from '@chakra-ui/core'
+import { Box, Button, Flex, Link, Text, useTheme } from '@chakra-ui/core'
 
 import { Fluid } from '../../../../pages'
 
@@ -44,13 +44,18 @@ export const Hero: React.FC = props => {
         </Text>
         <Flex justifyContent='center'>
           <Box background='white' borderRadius={15} overflow='hidden'>
-            <Button
-              px={[12, 12, 20]}
-              size='lg'
-              variantColor='flory'
-              isDisabled={true}>
-              <Text>เปิดรับสมัครวันที่ 28 มกราคม</Text>
-            </Button>
+            <Link
+              href={`#join`}
+              onClick={() =>
+                document
+                  .querySelector('#join')
+                  .scrollIntoView({ behavior: 'smooth' })
+              }
+              _hover={{ textDecoration: 'none' }}>
+              <Button px={[12, 12, 20]} size='lg' variantColor='flory'>
+                <Text>สมัครเลย!</Text>
+              </Button>
+            </Link>
           </Box>
         </Flex>
       </Box>
