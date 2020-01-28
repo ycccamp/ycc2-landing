@@ -5,6 +5,9 @@ import Head from 'next/head'
 import { CSSReset, ThemeProvider } from '@chakra-ui/core'
 import { css, Global } from '@emotion/core'
 
+import 'firebase/analytics'
+import { firebase } from '../../../core/services/firebase'
+
 import { theme } from '../theme'
 
 import { Navbar } from './navbar'
@@ -31,6 +34,9 @@ const FrontComponent: React.FC = props => {
     if (typeof window !== 'undefined') {
       smoothscroll.polyfill()
     }
+
+    const instance = firebase()
+    instance.analytics().logEvent('init')
   }, [])
 
   return (

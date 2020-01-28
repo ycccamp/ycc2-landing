@@ -3,7 +3,6 @@ import React, { useContext } from 'react'
 import Img from 'gatsby-image'
 
 import { Box, Button, Flex, PseudoBox, Text, useTheme } from '@chakra-ui/core'
-import { css } from '@emotion/core'
 
 import { Fluid } from '../../../../pages'
 

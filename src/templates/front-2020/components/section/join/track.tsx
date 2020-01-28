@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 
 import Img from 'gatsby-image'
 
@@ -20,6 +20,9 @@ import {
 } from '@chakra-ui/core'
 import { theme } from '../../../theme'
 
+import 'firebase/analytics'
+import { firebase } from '../../../../../core/services/firebase'
+
 import { Fluid } from '../../../../../pages'
 
 import { ITrackProps } from '../../../@types/ITrackProps'
@@ -32,6 +35,15 @@ export const Track: React.FC<ITrackProps> = props => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const cardRef = useRef(null)
+
+  useEffect(() => {
+    if (isOpen === true) {
+      const instance = firebase()
+      instance.analytics().logEvent('click-track', {
+        track: track.key,
+      })
+    }
+  }, [isOpen])
 
   return (
     <React.Fragment>
