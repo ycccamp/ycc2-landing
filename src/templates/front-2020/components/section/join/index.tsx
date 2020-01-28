@@ -7,8 +7,8 @@ import { Track } from './track'
 export const Join: React.FC = props => {
   const tracks = [
     {
-      key: 'programming',
-      name: 'Programming',
+      key: 'developer',
+      name: 'Developer',
       desc:
         'ผู้รังสรรค์และถ่ายทอดความคิดจินตนาการผ่านการเขียนโปรแกรมให้ออกมาสู่การใช้งานจริง',
     },
