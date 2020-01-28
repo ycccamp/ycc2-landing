@@ -62,7 +62,8 @@ export const Schedule: React.FC = props => {
                     item.key === schedule.active
                       ? theme.shadow['2xl']
                       : theme.shadow.lg
-                  }>
+                  }
+                  opacity={!(item.key === schedule.active) ? 0.4 : 1}>
                   <AspectRatioBox ratio={1 / 1}>
                     <Box objectFit='cover' borderRadius={999} overflow='hidden'>
                       <Img fluid={context.schedule[i]} />
