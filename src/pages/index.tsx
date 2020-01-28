@@ -44,8 +44,8 @@ IndexPage.getInitialProps = async () => {
       ],
     },
     track: {
-      programming: generateFluid(`track-programming.png`),
-      design: generateFluid(`track-design.png`),
+      developer: generateFluid(`track-developer.png`),
+      designer: generateFluid(`track-designer.png`),
       creative: generateFluid(`track-creative.png`),
     },
     schedule: [
