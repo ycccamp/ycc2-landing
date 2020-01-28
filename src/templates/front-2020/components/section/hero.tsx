@@ -21,7 +21,7 @@ export const Hero: React.FC = props => {
       id='hero'>
       <Box px={4}>
         <Flex justifyContent='center' pb={10}>
-          <Box maxWidth='180px' width={1 / 2}>
+          <Box maxWidth='170px' width={1 / 2}>
             <PseudoBox objectFit='cover'>
               <Img
                 fluid={context.logo}
