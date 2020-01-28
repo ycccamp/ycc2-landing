@@ -8,6 +8,7 @@ import {
   Button,
   Flex,
   Heading,
+  Link,
   Modal,
   ModalBody,
   ModalContent,
