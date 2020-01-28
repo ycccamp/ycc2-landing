@@ -14,7 +14,7 @@ class NextApp extends App {
           <meta name='title' content={`Young Creator's Camp`} />
           <meta
             name='description'
-            content='ค่ายเปลี่ยนวันมันธ์เป็น "นักสร้างสรรค์" ใน 3 วัน'
+            content='เปลี่ยนเด็กช่างฝัน ให้เป็นนักสร้างสรรค์นวัตกรรม'
           />
 
           <meta property='og:type' content='website' />
@@ -22,7 +22,7 @@ class NextApp extends App {
           <meta property='og:title' content={`Young Creator's Camp`} />
           <meta
             property='og:description'
-            content='ค่ายเปลี่ยนวันมันธ์เป็น "นักสร้างสรรค์" ใน 3 วัน'
+            content='เปลี่ยนเด็กช่างฝัน ให้เป็นนักสร้างสรรค์นวัตกรรม'
           />
           <meta property='og:image' content='https://ycc.in.th/static/og.jpg' />
 
@@ -31,7 +31,7 @@ class NextApp extends App {
           <meta property='twitter:title' content={`Young Creator's Camp`} />
           <meta
             property='twitter:description'
-            content='ค่ายเปลี่ยนวันมันธ์เป็น "นักสร้างสรรค์" ใน 3 วัน'
+            content='เปลี่ยนเด็กช่างฝัน ให้เป็นนักสร้างสรรค์นวัตกรรม'
           />
           <meta
             property='twitter:image'

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 
 import Img from 'gatsby-image'
 
@@ -8,18 +8,20 @@ import {
   Button,
   Flex,
   Heading,
-  Link,
   Modal,
   ModalBody,
-  ModalCloseButton,
   ModalContent,
   ModalFooter,
   ModalOverlay,
   PseudoBox,
   SlideIn,
+  Text,
   useDisclosure,
 } from '@chakra-ui/core'
 import { theme } from '../../../theme'
+
+import 'firebase/analytics'
+import { firebase } from '../../../../../core/services/firebase'
 
 import { Fluid } from '../../../../../pages'
 
@@ -32,28 +34,42 @@ export const Track: React.FC<ITrackProps> = props => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
+  const cardRef = useRef(null)
+
+  useEffect(() => {
+    if (isOpen === true) {
+      const instance = firebase()
+      instance.analytics().logEvent('click-track', {
+        track: track.key,
+      })
+    }
+  }, [isOpen])
+
   return (
     <React.Fragment>
       <Box
         p={4}
         key={`join-${track.key}`}
-        width={['100%', 1 / 2, 1 / 2, 1 / 3]}>
+        width={['100%', 1 / 2, 1 / 3, 1 / 3]}>
         <PseudoBox
           bg='white'
-          pt={8}
+          ref={cardRef}
           overflow='hidden'
           borderRadius={20}
           cursor='pointer'
           transition='200ms'
+          position='relative'
           transition-timing-function='ease-out'
-          transform='perspective(100px) translateZ(0px)'
+          transform='perspective(250px) translateZ(0px)'
           boxShadow={theme.shadow.lg}
           onClick={onOpen}
           _hover={{
-            transform: 'perspective(100px) translateZ(10px)',
+            transform: isOpen
+              ? 'perspective(250px) translateZ(0px)'
+              : 'perspective(250px) translateZ(10px)',
             boxShadow: theme.shadow['2xl'],
           }}>
-          <Heading size='md' textAlign='center'>
+          <Heading size='md' textAlign='center' pt={8}>
             {track.name}
           </Heading>
           <Box pt={8}>
@@ -63,12 +79,32 @@ export const Track: React.FC<ITrackProps> = props => {
               </Box>
             </AspectRatioBox>
           </Box>
+          <Flex
+            position='absolute'
+            zIndex={1}
+            bg='flory.500'
+            minWidth={1 / 3}
+            height='40px'
+            justifyContent='center'
+            alignItems='center'
+            borderRadius='0 20px 0 0'
+            color='flory.500'
+            left={0}
+            bottom={0}>
+            <Text fontSize='lg' color='white' px={5}>
+              เลือกสาขานี้
+            </Text>
+          </Flex>
         </PseudoBox>
       </Box>
       <SlideIn in={isOpen} items={[isOpen]}>
         {(styles: any) => {
           const modal = (
-            <Modal isOpen={true} size='2xl' onClose={onClose}>
+            <Modal
+              isOpen={true}
+              size='2xl'
+              onClose={onClose}
+              initialFocusRef={cardRef}>
               <ModalOverlay opacity={styles.opacity} />
               <ModalContent borderRadius={12} overflow='hidden' {...styles}>
                 <Flex
