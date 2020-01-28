@@ -25,6 +25,13 @@ class NextApp extends App {
             content='เปลี่ยนเด็กช่างฝัน ให้เป็นนักสร้างสรรค์นวัตกรรม'
           />
           <meta property='og:image' content='https://ycc.in.th/static/og.jpg' />
+          <meta
+            property='og:image:secure_url'
+            content='https://ycc.in.th/static/og.jpg'
+          />
+          <meta property='og:image:alt' content='Banner' />
+          <meta property='og:image:width' content='1500' />
+          <meta property='og:image:height' content='788' />
 
           <meta property='twitter:card' content='summary_large_image' />
           <meta property='twitter:url' content='https://ycc.in.th/' />
