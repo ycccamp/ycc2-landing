@@ -15,6 +15,7 @@ import {
   ModalFooter,
   ModalOverlay,
   PseudoBox,
+  SlideIn,
   useDisclosure,
 } from '@chakra-ui/core'
 import { theme } from '../../../theme'
@@ -63,41 +64,49 @@ export const Track: React.FC<ITrackProps> = props => {
           </Box>
         </PseudoBox>
       </Box>
-      <Modal size='2xl' isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent borderRadius={12} overflow='hidden'>
-          <ModalCloseButton />
+      <SlideIn in={isOpen} items={[isOpen]}>
+        {(styles: any) => {
+          const modal = (
+            <Modal isOpen={true} size='2xl' onClose={onClose}>
+              <ModalOverlay opacity={styles.opacity} />
+              <ModalContent borderRadius={12} overflow='hidden' {...styles}>
+                <ModalCloseButton />
 
-          <Flex flexWrap={['wrap', 'nowrap', 'nowrap', 'nowrap']}>
-            <Box
-              height='100%'
-              width='100%'
-              maxWidth={['100%', '400px', '400px', '400px']}
-              objectFit='cover'>
-              <Img fluid={context.track[track.key]} />
-            </Box>
-            <Box>
-              <ModalBody>
-                <Heading pt={6} pb={2}>
-                  {track.name}
-                </Heading>
-                <p>{track.desc}</p>
-              </ModalBody>
+                <Flex flexWrap={['wrap', 'nowrap', 'nowrap', 'nowrap']}>
+                  <Box
+                    height='100%'
+                    width='100%'
+                    maxWidth={['100%', '400px', '400px', '400px']}
+                    objectFit='cover'>
+                    <Img fluid={context.track[track.key]} />
+                  </Box>
+                  <Box>
+                    <ModalBody>
+                      <Heading pt={6} pb={2}>
+                        {track.name}
+                      </Heading>
+                      <p>{track.desc}</p>
+                    </ModalBody>
 
-              <ModalFooter>
-                <Flex pt={[2, 6, 6, 8]}>
-                  <Button variant='ghost' mr={3} onClick={onClose}>
-                    ปิด
-                  </Button>
-                  <Button variantColor='flory' isDisabled={true}>
-                    เปิดรับสมัครวันที่ 28
-                  </Button>
+                    <ModalFooter>
+                      <Flex pt={[2, 6, 6, 8]}>
+                        <Button variant='ghost' mr={3} onClick={onClose}>
+                          ปิด
+                        </Button>
+                        <Button variantColor='flory' isDisabled={true}>
+                          เปิดรับสมัครวันที่ 28
+                        </Button>
+                      </Flex>
+                    </ModalFooter>
+                  </Box>
                 </Flex>
-              </ModalFooter>
-            </Box>
-          </Flex>
-        </ModalContent>
-      </Modal>
+              </ModalContent>
+            </Modal>
+          ) as any
+
+          return modal
+        }}
+      </SlideIn>
     </React.Fragment>
   )
 }
