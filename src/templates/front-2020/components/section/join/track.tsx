@@ -8,6 +8,7 @@ import {
   Button,
   Flex,
   Heading,
+  Link,
   Modal,
   ModalBody,
   ModalContent,
@@ -135,13 +136,22 @@ export const Track: React.FC<ITrackProps> = props => {
                     </ModalBody>
 
                     <ModalFooter>
-                      <Flex pt={[2, 4, 6, 6]}>
+                      <Flex
+                        pt={[2, 4, 6, 6]}
+                        justifyContent='flex-end'
+                        width='100%'>
                         <Button variant='ghost' mr={3} onClick={onClose}>
                           ปิด
                         </Button>
-                        <Button variantColor='flory' isDisabled={true}>
-                          เปิดรับสมัครวันที่ 28
-                        </Button>
+                        <Link
+                          href='https://join.ycc.in.th'
+                          isExternal
+                          width={1 / 2}
+                          _hover={{ textDecoration: 'none' }}>
+                          <Button variantColor='flory' width='100%'>
+                            สมัครสาขานี้
+                          </Button>
+                        </Link>
                       </Flex>
                     </ModalFooter>
                   </Box>
