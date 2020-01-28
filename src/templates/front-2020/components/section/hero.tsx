@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import Img from 'gatsby-image'
 
-import { Box, Button, Flex, Heading, Text, useTheme } from '@chakra-ui/core'
+import { Box, Button, Flex, Text, useTheme } from '@chakra-ui/core'
 
 import { Fluid } from '../../../../pages'
 
