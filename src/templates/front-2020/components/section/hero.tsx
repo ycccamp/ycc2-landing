@@ -20,9 +20,14 @@ export const Hero: React.FC = props => {
       id='hero'>
       <Box px={4}>
         <Flex justifyContent='center' pb={10}>
-          <Box maxWidth='400px' width={1 / 2}>
+          <Box maxWidth='170px' width={1 / 2}>
             <Box objectFit='cover'>
-              <Img fluid={context.logo} />
+              <Img
+                fluid={context.logo}
+                style={{
+                  filter: 'drop-shadow(2px 4px 6px rgba(65, 147, 164, 0.32))',
+                }}
+              />
             </Box>
           </Box>
         </Flex>

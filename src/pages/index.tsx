@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { NextPage } from 'next'
+
+import 'firebase/analytics'
+import { firebase } from '../core/services/firebase'
 
 import Front2020 from '../templates/front-2020/components'
 
 export const Fluid = React.createContext<any>(null)
 
 const IndexPage: NextPage = props => {
+  useEffect(() => {
+    const instance = firebase()
+
+    instance.analytics().logEvent('init')
+  }, [])
+
   return (
     <Fluid.Provider value={props}>
       <Front2020 />
@@ -44,8 +53,8 @@ IndexPage.getInitialProps = async () => {
       ],
     },
     track: {
-      programming: generateFluid(`track-programming.png`),
-      design: generateFluid(`track-design.png`),
+      developer: generateFluid(`track-developer.png`),
+      designer: generateFluid(`track-designer.png`),
       creative: generateFluid(`track-creative.png`),
     },
     schedule: [

@@ -7,14 +7,14 @@ import { Track } from './track'
 export const Join: React.FC = props => {
   const tracks = [
     {
-      key: 'programming',
-      name: 'Programming',
+      key: 'developer',
+      name: 'Developer',
       desc:
         'ผู้รังสรรค์และถ่ายทอดความคิดจินตนาการผ่านการเขียนโปรแกรมให้ออกมาสู่การใช้งานจริง',
     },
     {
-      key: 'design',
-      name: 'Design',
+      key: 'designer',
+      name: 'Designer',
       desc:
         'ผู้ออกแบบที่เต็มไปด้วยความคิดสร้างสรรค์ รักความสวยงาม และมีเอกลักษณ์ในตัวเอง',
     },
@@ -33,7 +33,7 @@ export const Join: React.FC = props => {
       minHeight='100%'
       py={20}
       id='join'>
-      <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
+      <Box width={[22 / 24, 20 / 24, 18 / 24, 14 / 24]}>
         <Heading textAlign='center' size='2xl' pb={10}>
           เลือกสาขา
         </Heading>
