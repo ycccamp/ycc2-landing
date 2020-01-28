@@ -8175,6 +8175,13 @@ network-information-types@^0.1.0:
   resolved "https://registry.yarnpkg.com/network-information-types/-/network-information-types-0.1.0.tgz#5c880bebc2a9e6b25eb00ed23854d13ff3a7fe3a"
   integrity sha512-cRUCYZoRHTMjYcgk5MbwqM0h0Za34panRxAJKY8n+mQ+NLMuRIw7aKzmaZqkC/cte7bnRcdfTwFA27GgN62EtQ==
 
+next-fbq@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/next-fbq/-/next-fbq-2.0.0.tgz#6b3c752b293369a70e35028d8d082bcebcf91e60"
+  integrity sha512-ZdxkigGJVJxA6Fw72eKwqMP7dnUebyuVyp/aWZDAa09mmJw/ps2ok1W7VQlaidDJ0hnL6h2yjpPOGhe4i8lYRw==
+  dependencies:
+    react-facebook-pixel "^0.1.1"
+
 next-optimized-images@^2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.5.4.tgz#afc2812efd34901ebb0a8b18e21a5989b385cfe5"
@@ -9926,6 +9933,11 @@ react-error-overlay@5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
+
+react-facebook-pixel@^0.1.1:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/react-facebook-pixel/-/react-facebook-pixel-0.1.3.tgz#4dcd065d0d6423fb07471c7758c2f9c1986e4ce4"
+  integrity sha512-9Zlnmjn2zGPGucuaxjHkNHW3DvDMCLkM9DFx0o0j7u3fzzsD+2bOtG1JA3PP8A11U5WBwoL0BD/RGQmaDvaIDw==
 
 react-focus-lock@^2.2.1:
   version "2.2.1"
