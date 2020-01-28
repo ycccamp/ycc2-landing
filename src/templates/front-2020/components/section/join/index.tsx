@@ -37,11 +37,11 @@ export const Join: React.FC = props => {
         <Heading textAlign='center' size='2xl' pb={10}>
           เลือกสาขา
         </Heading>
-        {/* <Flex flexWrap='wrap'>
+        <Flex flexWrap='wrap'>
           {tracks.map(track => (
             <Track key={`track-${track.key}`} track={track} />
           ))}
-        </Flex> */}
+        </Flex>
       </Box>
     </Flex>
   )
