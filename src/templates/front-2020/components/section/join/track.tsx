@@ -71,13 +71,24 @@ export const Track: React.FC<ITrackProps> = props => {
             <Modal isOpen={true} size='2xl' onClose={onClose}>
               <ModalOverlay opacity={styles.opacity} />
               <ModalContent borderRadius={12} overflow='hidden' {...styles}>
-                <Flex flexWrap={['wrap', 'nowrap', 'nowrap', 'nowrap']}>
+                <Flex
+                  flexWrap={['wrap', 'nowrap', 'nowrap', 'nowrap']}
+                  alignItems='center'>
                   <Box
                     height='100%'
                     width='100%'
                     maxWidth={['100%', '400px', '400px', '350px']}
                     objectFit='cover'>
-                    <Img fluid={context.track[track.key]} />
+                    <Box display={['none', 'block', 'block', 'block']}>
+                      <Img fluid={context.track[track.key]} />
+                    </Box>
+                    <AspectRatioBox
+                      ratio={1 / 1}
+                      display={['block', 'none', 'none', 'none']}>
+                      <Box overflow='hidden'>
+                        <Img fluid={context.track[track.key]} />
+                      </Box>
+                    </AspectRatioBox>
                   </Box>
                   <Box>
                     <ModalBody>
@@ -88,7 +99,7 @@ export const Track: React.FC<ITrackProps> = props => {
                     </ModalBody>
 
                     <ModalFooter>
-                      <Flex pt={[2, 6, 6, 8]}>
+                      <Flex pt={[2, 4, 6, 6]}>
                         <Button variant='ghost' mr={3} onClick={onClose}>
                           ปิด
                         </Button>
