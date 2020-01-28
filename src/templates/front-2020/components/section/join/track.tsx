@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import Img from 'gatsby-image'
 
@@ -30,6 +30,8 @@ export const Track: React.FC<ITrackProps> = props => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
+  const cardRef = useRef(null)
+
   return (
     <React.Fragment>
       <Box
@@ -39,16 +41,19 @@ export const Track: React.FC<ITrackProps> = props => {
         <PseudoBox
           bg='white'
           pt={8}
+          ref={cardRef}
           overflow='hidden'
           borderRadius={20}
           cursor='pointer'
           transition='200ms'
           transition-timing-function='ease-out'
-          transform='perspective(100px) translateZ(0px)'
+          transform='perspective(250px) translateZ(0px)'
           boxShadow={theme.shadow.lg}
           onClick={onOpen}
           _hover={{
-            transform: 'perspective(100px) translateZ(10px)',
+            transform: isOpen
+              ? 'perspective(250px) translateZ(0px)'
+              : 'perspective(250px) translateZ(10px)',
             boxShadow: theme.shadow['2xl'],
           }}>
           <Heading size='md' textAlign='center'>
@@ -66,7 +71,11 @@ export const Track: React.FC<ITrackProps> = props => {
       <SlideIn in={isOpen} items={[isOpen]}>
         {(styles: any) => {
           const modal = (
-            <Modal isOpen={true} size='2xl' onClose={onClose}>
+            <Modal
+              isOpen={true}
+              size='2xl'
+              onClose={onClose}
+              initialFocusRef={cardRef}>
               <ModalOverlay opacity={styles.opacity} />
               <ModalContent borderRadius={12} overflow='hidden' {...styles}>
                 <Flex
