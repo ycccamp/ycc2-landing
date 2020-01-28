@@ -8,6 +8,7 @@ import {
   Button,
   Flex,
   Heading,
+  Link,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -76,7 +77,16 @@ export const Track: React.FC<ITrackProps> = props => {
                     width='100%'
                     maxWidth={['100%', '400px', '400px', '350px']}
                     objectFit='cover'>
-                    <Img fluid={context.track[track.key]} />
+                    <Box display={['none', 'block', 'block', 'block']}>
+                      <Img fluid={context.track[track.key]} />
+                    </Box>
+                    <AspectRatioBox
+                      ratio={1 / 1}
+                      display={['block', 'none', 'none', 'none']}>
+                      <Box overflow='hidden'>
+                        <Img fluid={context.track[track.key]} />
+                      </Box>
+                    </AspectRatioBox>
                   </Box>
                   <Box>
                     <ModalBody>
