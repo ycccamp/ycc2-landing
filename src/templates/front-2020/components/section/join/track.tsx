@@ -15,6 +15,7 @@ import {
   ModalOverlay,
   PseudoBox,
   SlideIn,
+  Text,
   useDisclosure,
 } from '@chakra-ui/core'
 import { theme } from '../../../theme'
@@ -40,12 +41,12 @@ export const Track: React.FC<ITrackProps> = props => {
         width={['100%', 1 / 2, 1 / 3, 1 / 3]}>
         <PseudoBox
           bg='white'
-          pt={8}
           ref={cardRef}
           overflow='hidden'
           borderRadius={20}
           cursor='pointer'
           transition='200ms'
+          position='relative'
           transition-timing-function='ease-out'
           transform='perspective(250px) translateZ(0px)'
           boxShadow={theme.shadow.lg}
@@ -56,7 +57,7 @@ export const Track: React.FC<ITrackProps> = props => {
               : 'perspective(250px) translateZ(10px)',
             boxShadow: theme.shadow['2xl'],
           }}>
-          <Heading size='md' textAlign='center'>
+          <Heading size='md' textAlign='center' pt={8}>
             {track.name}
           </Heading>
           <Box pt={8}>
@@ -66,6 +67,22 @@ export const Track: React.FC<ITrackProps> = props => {
               </Box>
             </AspectRatioBox>
           </Box>
+          <Flex
+            position='absolute'
+            zIndex={1}
+            bg='flory.500'
+            minWidth={1 / 3}
+            height='40px'
+            justifyContent='center'
+            alignItems='center'
+            borderRadius='0 20px 0 0'
+            color='flory.500'
+            left={0}
+            bottom={0}>
+            <Text fontSize='lg' color='white' px={5}>
+              เลือกสาขานี้
+            </Text>
+          </Flex>
         </PseudoBox>
       </Box>
       <SlideIn in={isOpen} items={[isOpen]}>
