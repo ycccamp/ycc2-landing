@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { NextPage } from 'next'
+
+import 'firebase/analytics'
+import { firebase } from '../core/services/firebase'
 
 import Front2020 from '../templates/front-2020/components'
 
 export const Fluid = React.createContext<any>(null)
 
 const IndexPage: NextPage = props => {
+  useEffect(() => {
+    const instance = firebase()
+
+    instance.analytics().logEvent('init')
+  }, [])
+
   return (
     <Fluid.Provider value={props}>
       <Front2020 />
