@@ -37,7 +37,7 @@ export const Track: React.FC<ITrackProps> = props => {
       <Box
         p={4}
         key={`join-${track.key}`}
-        width={['100%', 1 / 2, 1 / 2, 1 / 3]}>
+        width={['100%', 1 / 2, 1 / 3, 1 / 3]}>
         <PseudoBox
           bg='white'
           pt={8}
