@@ -28,6 +28,7 @@ export const Venue: React.FC = props => {
               title='Google Maps'
               width='100%'
               height='100%'
+              loading='lazy'
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7820.528495474858!2d100.53707049941988!3d13.744384935812343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29eda9b36b1d3%3A0xbcc1bbe09f2e2d36!2sAmarin%20Plaza!5e0!3m2!1sen!2sth!4v1580223015570!5m2!1sen!2sth'
             />
           </Box>
