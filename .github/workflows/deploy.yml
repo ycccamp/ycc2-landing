@@ -65,6 +65,12 @@ jobs:
       - name: 'Init: Install dependencies'
         run: |
           yarn install
+          cd ./functions
+          yarn install
+          cd ..
+      - name: "Build: Build firebase functions"
+        run: |
+          yarn build:functions
       - name: "Build: Build static Next site"
         run: |
           yarn build

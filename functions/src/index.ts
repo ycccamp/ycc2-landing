@@ -1,0 +1,34 @@
+import * as admin from 'firebase-admin'
+import * as functions from 'firebase-functions'
+
+export const counter = functions.https.onRequest(async (request, response) => {
+  // Init Firebase
+  if (!admin.apps.length) {
+    admin.initializeApp()
+  } else {
+    admin.app()
+  }
+
+  // Ref for locked result
+  const lockedResultRef = await admin
+    .firestore()
+    .collection('registration')
+    .where('isLocked', '==', true)
+
+  const tracks = ['developer', 'designer', 'creative']
+
+  const filter = await tracks.map(async track => {
+    const snapshot = await lockedResultRef.where('track', '==', track).get()
+
+    return {
+      track,
+      amount: snapshot.size,
+    }
+  })
+
+  Promise.all(filter).then(res => {
+    return response.send({
+      data: res,
+    })
+  })
+})

@@ -120,3 +120,4 @@ typings/
 
 out/
 package-lock.json
+.firebase/

@@ -39,9 +39,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build:functions": "tsc -p ./functions",
     "export": "next export",
     "firebase": "firebase",
-    "start": "firebase serve --only hosting",
+    "start": "firebase serve",
     "test:types": "tsc",
     "test:lint": "tslint 'src/**/*.{ts,tsx}'"
   },
