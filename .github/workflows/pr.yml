@@ -29,7 +29,9 @@ jobs:
     - name: "Init: Install dependencies"
       run: |
         yarn install
-        yarn global add firebase-cli
+        cd ./functions
+        yarn install
+        cd ..
     - name: "Test: Type checking"
       run: |
         yarn test:types

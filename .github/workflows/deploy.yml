@@ -31,8 +31,10 @@ jobs:
           ${{ runner.OS }}-node-
     - name: "Init: Install dependencies"
       run: |
-        yarn install
-        yarn global add firebase-cli
+          yarn install
+          cd ./functions
+          yarn install
+          cd ..
     - name: "Test: Type checking"
       run: |
         yarn test:types
