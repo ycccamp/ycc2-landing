@@ -25,14 +25,16 @@ const IndexPage: NextPage = props => {
 
 IndexPage.getInitialProps = async () => {
   const generateFluid = (src: string) => {
+    const resizedOriginal = require(`../../assets/image/2020/${src}?resize&size=550`)
     const images = require(`../../assets/image/2020/${src}?resize&sizes[]=200&sizes[]=350&sizes[]=500`)
     const webP = require(`../../assets/image/2020/${src}?webp`)
     const trace = require(`../../assets/image/2020/${src}?trace`).trace
 
     const res = {
-      src: images.src,
+      src: resizedOriginal.src,
       srcSet: images.srcSet,
       srcWebp: webP,
+      srcSetWebp: webP,
       tracedSVG: trace,
       aspectRatio: images.width / images.height,
       sizes: `(max-width: 500px) 100vw, 500px`,
