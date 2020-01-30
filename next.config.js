@@ -31,6 +31,9 @@ const withPreact = (nextConfig = {}) => {
 
 module.exports = optimizedImages(
 	withPreact({
+		env: {
+			FULLSTORY: process.env.FULLSTORY,
+		},
 		exportTrailingSlash: true,
 		optimizeImagesInDev: true,
     mozjpeg: {

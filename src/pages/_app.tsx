@@ -8,9 +8,15 @@ import Router from 'next/router'
 
 import AppShell from '../app/components'
 
+interface IAppProps {
+  fullstory: string
+}
+
 class NextApp extends App {
   public render() {
     const { Component, pageProps } = this.props
+
+    const fullstory = process.env.FULLSTORY ? process.env.FULLSTORY : ''
 
     return (
       <React.Fragment>
@@ -49,7 +55,7 @@ class NextApp extends App {
             content='https://ycc.in.th/static/og.jpg'
           />
         </Head>
-        <AppShell>
+        <AppShell fullstory={fullstory}>
           <Component {...pageProps} />
         </AppShell>
       </React.Fragment>

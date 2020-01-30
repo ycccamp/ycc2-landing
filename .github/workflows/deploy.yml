@@ -74,6 +74,8 @@ jobs:
         run: |
           yarn build:functions
       - name: "Build: Build static Next site"
+        env:
+          FULLSTORY: ${{ secrets.FULLSTORY }}
         run: |
           yarn build
           yarn export
