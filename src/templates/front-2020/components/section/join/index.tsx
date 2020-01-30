@@ -1,10 +1,16 @@
 import React from 'react'
 
+import dynamic from 'next/dynamic'
+
 import { Box, Flex, Heading } from '@chakra-ui/core'
 
-import { Track } from './track'
+import { useCounter } from '../../../../../core/services/useCounter'
+
+const Track = dynamic(() => import('./track'), { ssr: false })
 
 export const Join: React.FC = props => {
+  const counter = useCounter()
+
   const tracks = [
     {
       key: 'developer',
@@ -33,13 +39,13 @@ export const Join: React.FC = props => {
       minHeight='100%'
       py={20}
       id='join'>
-      <Box width={[22 / 24, 20 / 24, 18 / 24, 14 / 24]}>
+      <Box width={[22 / 24, 20 / 24, 18 / 24, 16 / 24]}>
         <Heading textAlign='center' size='2xl' pb={10}>
           เลือกสาขา
         </Heading>
         <Flex flexWrap='wrap'>
           {tracks.map(track => (
-            <Track key={`track-${track.key}`} track={track} />
+            <Track key={`track-${track.key}`} track={track} counter={counter} />
           ))}
         </Flex>
       </Box>

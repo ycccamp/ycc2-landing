@@ -1,4 +1,10 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, {
+  ReactText,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 
 import Img from 'gatsby-image'
 
@@ -16,6 +22,9 @@ import {
   ModalOverlay,
   PseudoBox,
   SlideIn,
+  Stat,
+  StatLabel,
+  StatNumber,
   Text,
   useDisclosure,
 } from '@chakra-ui/core'
@@ -29,13 +38,28 @@ import { Fluid } from '../../../../../pages'
 import { ITrackProps } from '../../../@types/ITrackProps'
 
 export const Track: React.FC<ITrackProps> = props => {
-  const { track } = props
+  const { track, counter } = props
 
   const context = useContext(Fluid)
+  const [count, setCount] = useState<ReactText>('--')
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const cardRef = useRef(null)
+
+  useEffect(() => {
+    if (counter.error) {
+      setCount('-1')
+    } else {
+      if (!counter.loading && counter.data !== null) {
+        const filteredData = counter.data.data.filter(
+          o => o.track === track.key
+        )[0]
+
+        setCount(filteredData.amount)
+      }
+    }
+  }, [counter])
 
   useEffect(() => {
     if (isOpen === true) {
@@ -51,7 +75,7 @@ export const Track: React.FC<ITrackProps> = props => {
       <Box
         p={4}
         key={`join-${track.key}`}
-        width={['100%', 1 / 2, 1 / 3, 1 / 3]}>
+        width={['100%', 1 / 2, 1 / 2, 1 / 3]}>
         <PseudoBox
           bg='white'
           ref={cardRef}
@@ -70,9 +94,14 @@ export const Track: React.FC<ITrackProps> = props => {
               : 'perspective(250px) translateZ(10px)',
             boxShadow: theme.shadow['2xl'],
           }}>
-          <Heading size='md' textAlign='center' pt={8}>
-            {track.name}
-          </Heading>
+          <Flex pt={6} px={5} alignItems='center'>
+            <Heading size='md'>{track.name}</Heading>
+            <Box mx='auto' />
+            <Stat textAlign='right'>
+              <StatLabel>ลงทะเบียนแล้ว</StatLabel>
+              <StatNumber fontSize='xl'>{count} คน</StatNumber>
+            </Stat>
+          </Flex>
           <Box pt={8}>
             <AspectRatioBox ratio={3 / 4}>
               <Box objectFit='cover'>
@@ -133,13 +162,16 @@ export const Track: React.FC<ITrackProps> = props => {
                         {track.name}
                       </Heading>
                       <p>{track.desc}</p>
+                      <Box py={4}>
+                        <Stat textAlign='left'>
+                          <StatLabel>ลงทะเบียนแล้ว</StatLabel>
+                          <StatNumber fontSize='xl'>{count} คน</StatNumber>
+                        </Stat>
+                      </Box>
                     </ModalBody>
 
                     <ModalFooter>
-                      <Flex
-                        pt={[2, 4, 6, 6]}
-                        justifyContent='flex-end'
-                        width='100%'>
+                      <Flex justifyContent='flex-end' width='100%'>
                         <Button variant='ghost' mr={3} onClick={onClose}>
                           ปิด
                         </Button>
@@ -166,3 +198,5 @@ export const Track: React.FC<ITrackProps> = props => {
     </React.Fragment>
   )
 }
+
+export default Track
