@@ -132,6 +132,7 @@ export const Track: React.FC<ITrackProps> = props => {
           const modal = (
             <Modal
               isOpen={true}
+              isCentered={true}
               size='2xl'
               onClose={onClose}
               initialFocusRef={cardRef}>
