@@ -44,7 +44,6 @@ IndexPage.getInitialProps = async () => {
   }
 
   return {
-    logo: generateFluid('logo.png'),
     gallery: {
       main: generateFluid('gallery-1.jpg'),
       sub: [
