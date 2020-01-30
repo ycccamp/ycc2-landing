@@ -37,3 +37,5 @@ export const Venue: React.FC = props => {
     </Flex>
   )
 }
+
+export default Venue

@@ -37,3 +37,5 @@ export const Sponsor: React.FC = props => {
     </Flex>
   )
 }
+
+export default Sponsor

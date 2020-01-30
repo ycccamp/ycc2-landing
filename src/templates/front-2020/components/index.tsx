@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
 import { CSSReset, ThemeProvider } from '@chakra-ui/core'
@@ -11,20 +12,19 @@ import { firebase } from '../../../core/services/firebase'
 import { theme } from '../theme'
 
 import { Navbar } from './navbar'
-import {
-  About,
-  Contact,
-  FAQ,
-  Footer,
-  Gallery,
-  Hero,
-  Join,
-  Schedule,
-  Sponsor,
-  Venue,
-} from './section'
+import { About } from './section/about'
+import { Hero } from './section/hero'
 
 import smoothscroll from 'smoothscroll-polyfill'
+
+const Contact = dynamic(import(`./section/contact`), { ssr: false })
+const FAQ = dynamic(import(`./section/faq`), { ssr: false })
+const Footer = dynamic(import(`./section/footer`), { ssr: false })
+const Gallery = dynamic(import(`./section/gallery`), { ssr: false })
+const Join = dynamic(import(`./section/join`), { ssr: false })
+const Schedule = dynamic(import(`./section/schedule`), { ssr: false })
+const Sponsor = dynamic(import(`./section/sponsor`), { ssr: false })
+const Venue = dynamic(import(`./section/venue`), { ssr: false })
 
 const FrontComponent: React.FC = props => {
   const size = 10
@@ -77,6 +77,7 @@ const FrontComponent: React.FC = props => {
         <Navbar />
         <Hero />
         <About />
+        {/* {nonSSRSections.map(section => dynamicImport(section))} */}
         <Join />
         <Schedule />
         <Venue />

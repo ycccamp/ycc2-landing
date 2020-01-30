@@ -33,3 +33,5 @@ export const FAQ: React.FC = props => {
     </Flex>
   )
 }
+
+export default FAQ

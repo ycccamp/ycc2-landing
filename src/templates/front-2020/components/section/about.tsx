@@ -39,3 +39,5 @@ export const About: React.FC = props => {
     </Flex>
   )
 }
+
+export default About

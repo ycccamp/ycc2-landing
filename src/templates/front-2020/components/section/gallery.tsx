@@ -62,3 +62,5 @@ export const Gallery: React.FC = props => {
     </Flex>
   )
 }
+
+export default Gallery

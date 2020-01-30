@@ -77,3 +77,5 @@ export const Hero: React.FC = props => {
     </Flex>
   )
 }
+
+export default Hero

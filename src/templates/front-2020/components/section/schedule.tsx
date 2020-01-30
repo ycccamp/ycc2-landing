@@ -85,3 +85,5 @@ export const Schedule: React.FC = props => {
     </Flex>
   )
 }
+
+export default Schedule

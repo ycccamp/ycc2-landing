@@ -46,3 +46,5 @@ export const Join: React.FC = props => {
     </Flex>
   )
 }
+
+export default Join

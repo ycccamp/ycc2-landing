@@ -61,3 +61,5 @@ export const Contact: React.FC = props => {
     </Flex>
   )
 }
+
+export default Contact
