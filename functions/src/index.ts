@@ -28,7 +28,9 @@ export const counter = functions
       }
     })
 
-    Promise.all(filter).then(res => {
+    Promise.all(filter).then(async res => {
+      await response.set('Access-Control-Allow-Origin', '*')
+
       return response.send({
         data: res,
       })
