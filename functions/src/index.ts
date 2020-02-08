@@ -1,6 +1,8 @@
 import * as admin from 'firebase-admin'
 import * as functions from 'firebase-functions'
 
+const tracks = ['developer', 'designer', 'creative']
+
 export const counter = functions
   .region('asia-east2')
   .https.onRequest(async (request, response) => {
@@ -12,15 +14,10 @@ export const counter = functions
     }
 
     // Ref for locked result
-    const lockedResultRef = await admin
-      .firestore()
-      .collection('registration')
-      .where('isLocked', '==', true)
-
-    const tracks = ['developer', 'designer', 'creative']
+    const resultRef = await admin.firestore().collection('registration')
 
     const filter = await tracks.map(async track => {
-      const snapshot = await lockedResultRef.where('track', '==', track).get()
+      const snapshot = await resultRef.where('track', '==', track).get()
 
       return {
         track,
