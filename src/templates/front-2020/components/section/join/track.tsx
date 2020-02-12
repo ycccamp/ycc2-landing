@@ -82,16 +82,12 @@ export const Track: React.FC<ITrackProps> = props => {
           overflow='hidden'
           borderRadius={20}
           cursor='pointer'
-          transition='200ms'
+          transition='all 0.2s ease-in-out'
           position='relative'
-          transition-timing-function='ease-out'
-          transform='perspective(250px) translateZ(0px)'
           boxShadow={theme.shadow.lg}
           onClick={onOpen}
           _hover={{
-            transform: isOpen
-              ? 'perspective(250px) translateZ(0px)'
-              : 'perspective(250px) translateZ(10px)',
+            transform: 'scale(1.1)',
             boxShadow: theme.shadow['2xl'],
           }}>
           <Flex pt={6} px={5} alignItems='center'>
