@@ -3,7 +3,7 @@ import React from 'react'
 import { AspectRatioBox, Box, Flex, Heading, Image } from '@chakra-ui/core'
 
 export const Sponsor: React.FC = props => {
-  const sponsors = ['rise', 'svl', 'dekd']
+  const sponsors = ['rise', 'svl', 'dekd', 'finema', 'msp', 'qtft']
 
   return (
     <Flex
