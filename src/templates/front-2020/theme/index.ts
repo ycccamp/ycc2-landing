@@ -35,7 +35,7 @@ export const getShade = (color: string): ColorHues => {
     800: baseColor.darken(0.375).string(),
     900: baseColor.darken(0.5).string(),
   }
-}
+t
 
 export const theme: ITheme = {
   ...chakraTheme,
