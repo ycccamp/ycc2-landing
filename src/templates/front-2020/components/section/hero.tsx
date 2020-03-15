@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Box, Button, Flex, Image, Link, Text, useTheme } from '@chakra-ui/core'
 
+import { AnnouncementInterview } from './announcement/interview'
+
 export const Hero: React.FC = props => {
   const theme = useTheme()
 
@@ -52,7 +54,7 @@ export const Hero: React.FC = props => {
         </Text>
         <Flex justifyContent='center'>
           <Box background='white' borderRadius={15} overflow='hidden'>
-            <Link
+            {/* <Link
               href={`#join`}
               onClick={() =>
                 document
@@ -63,7 +65,8 @@ export const Hero: React.FC = props => {
               <Button px={[12, 12, 20]} size='lg' variantColor='flory'>
                 <Text>สมัครเลย!</Text>
               </Button>
-            </Link>
+            </Link> */}
+            <AnnouncementInterview />
           </Box>
         </Flex>
       </Box>
