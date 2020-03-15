@@ -77,7 +77,6 @@ const FrontComponent: React.FC = props => {
         <Navbar />
         <Hero />
         <About />
-        {/* {nonSSRSections.map(section => dynamicImport(section))} */}
         <Join />
         <Schedule />
         <Venue />
