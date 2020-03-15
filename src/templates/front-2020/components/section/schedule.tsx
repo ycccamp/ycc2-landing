@@ -18,13 +18,8 @@ export const Schedule: React.FC = props => {
       },
       {
         key: 'announce',
-        title: 'ประกาศผล',
+        title: 'ประกาศผู้มีสิทธิ์สัมภาษณ์',
         date: '15 มีนาคม',
-      },
-      {
-        key: 'verify',
-        title: 'ยืนยันสิทธิ์',
-        date: '18 มีนาคม',
       },
       {
         key: 'camp',
