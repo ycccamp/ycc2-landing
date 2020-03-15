@@ -50,7 +50,11 @@ export const AnnouncementInterview: React.FC = props => {
               <ModalContent borderRadius={12} overflow='hidden' {...styles}>
                 <ModalHeader>รายชื่อผู้มีสิทธิ์สัมภาษณ์</ModalHeader>
                 <ModalCloseButton />
-                <ModalBody style={{ overflow: "scroll", maxHeight: "calc(90vh - 134px)" }}>
+                <ModalBody
+                  style={{
+                    overflow: 'scroll',
+                    maxHeight: 'calc(90vh - 134px)',
+                  }}>
                   <Tabs variant='soft-rounded'>
                     <TabList pb={4}>
                       {Object.entries(interviewList).map(([key]) => (
