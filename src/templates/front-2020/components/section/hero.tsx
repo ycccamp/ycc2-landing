@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Button, Flex, Image, Link, Text, useTheme } from '@chakra-ui/core'
 
-import { Announcement } from './announcement'
+import { AnnouncementInterview } from './announcement/interview'
 
 export const Hero: React.FC = props => {
   const theme = useTheme()
@@ -66,7 +66,7 @@ export const Hero: React.FC = props => {
                 <Text>สมัครเลย!</Text>
               </Button>
             </Link> */}
-            <Announcement />
+            <AnnouncementInterview />
           </Box>
         </Flex>
       </Box>
